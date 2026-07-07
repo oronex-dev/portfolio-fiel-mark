@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiel Mark E. Oronos — Frontend Developer & CS Student</title>
+<meta name="description" content="Fiel Mark E. Oronos is a Computer Science student and frontend developer building modern web experiences, intelligent software, and user-centered digital solutions.">
+<meta name="keywords" content="Fiel Mark Oronos, Frontend Developer, Computer Science Student, UI/UX Designer, Web Developer Philippines, Portfolio">
+<meta name="author" content="Fiel Mark E. Oronos">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fielmarkoronos.dev/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fiel Mark E. Oronos — Frontend Developer & CS Student">
+<meta property="og:description" content="Building modern web experiences, intelligent software, and user-centered digital solutions.">
+<meta property="og:image" content="assets/og-cover.png">
+<meta property="og:url" content="https://fielmarkoronos.dev/">
+<meta property="og:site_name" content="Fiel Mark E. Oronos Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fiel Mark E. Oronos — Frontend Developer & CS Student">
+<meta name="twitter:description" content="Building modern web experiences, intelligent software, and user-centered digital solutions.">
+<meta name="twitter:image" content="assets/og-cover.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="Oronex Logo Concepts & Style Guide.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Fiel Mark Estañol Oronos",
+  "alternateName": "Fiel Mark E. Oronos",
+  "jobTitle": "Frontend Developer",
+  "description": "Computer Science student and frontend developer building modern web experiences, intelligent software, and user-centered digital solutions.",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Concepcion Holy Cross College"
+  },
+  "knowsAbout": ["JavaScript", "Frontend Development", "UI/UX Design", "Artificial Intelligence", "Java", "Python"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-mark" viewBox="0 0 100 100" width="64" height="64">
+      <circle class="loader-ring" cx="50" cy="50" r="42"></circle>
+      <text x="50" y="62" text-anchor="middle" class="loader-letter">F</text>
+    </svg>
+    <div class="loader-bar"><span id="loader-progress"></span></div>
+    <p class="loader-text">Loading portfolio<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
+  </div>
+</div>
+
+<!-- ============ AURORA BACKDROP ============ -->
+<canvas id="aurora-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo" aria-label="Fiel Mark Oronos, back to top">
+      <span class="logo-mark">F<span class="logo-dot">.</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"><span class="nav-num">01</span>About</a></li>
+      <li><a href="#skills"><span class="nav-num">02</span>Skills</a></li>
+      <li><a href="#services"><span class="nav-num">03</span>Services</a></li>
+      <li><a href="#projects"><span class="nav-num">04</span>Projects</a></li>
+      <li><a href="#resume"><span class="nav-num">05</span>Resume</a></li>
+      <li><a href="#contact"><span class="nav-num">06</span>Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-small btn-primary nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ============ MOBILE FULLSCREEN MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="#about" data-index="01">About</a></li>
+    <li><a href="#skills" data-index="02">Skills</a></li>
+    <li><a href="#services" data-index="03">Services</a></li>
+    <li><a href="#projects" data-index="04">Projects</a></li>
+    <li><a href="#resume" data-index="05">Resume</a></li>
+    <li><a href="#contact" data-index="06">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-socials">
+    <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:oronosfielmark@gmail.com">Email</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
+    <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal-up"><span class="eyebrow-dot"></span>Available for opportunities</p>
+        <h1 class="hero-title">
+          <span class="reveal-up" style="--d:0.05s">Hi, I'm</span>
+          <span class="hero-name reveal-up" style="--d:0.15s">Fiel Mark<br>E. Oronos</span>
+        </h1>
+        <p class="hero-role reveal-up" style="--d:0.25s">
+          <span id="typedRole"></span><span class="type-cursor">|</span>
+        </p>
+        <p class="hero-summary reveal-up" style="--d:0.35s">
+          Building modern web experiences, intelligent software, and user-centered digital solutions —
+          one clean line of code at a time.
+        </p>
+        <div class="hero-cta reveal-up" style="--d:0.45s">
+          <a href="RESUME-Oronos-Fiel.pdf" class="btn btn-primary magnetic" download>
+            <span>Download Resume</span>
+          </a>
+          <a href="#projects" class="btn btn-ghost magnetic">
+            <span>View Projects</span>
+          </a>
+        </div>
+        <div class="hero-socials reveal-up" style="--d:0.55s">
+          <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener" aria-label="GitHub profile">GH</a>
+          <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener" aria-label="LinkedIn profile">IN</a>
+          <a href="mailto:oronosfielmark@gmail.com" aria-label="Send an email">@</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal-up" style="--d:0.3s">
+        <div class="profile-ring">
+          <div class="profile-orbit"></div>
+          <div class="profile-card glass">
+          <img src="Oronos_Formal.jpg" class="profile-avatar" aria-hidden="true">
+            <p class="profile-caption">Computer Science<br>Student &amp; Developer</p>
+          </div>
+          <span class="floating-chip chip-1">Website Designing</span>
+          <span class="floating-chip chip-2">Programming</span>
+          <span class="floating-chip chip-3">Data Presentation</span>
+        </div>
+      </div>
+    </div>
+    <button class="scroll-indicator" id="scrollIndicator" aria-label="Scroll to About section">
+      <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+      <span class="scroll-label">Scroll</span>
+    </button>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">About</p>
+      <h2 class="section-title reveal-up">The person behind the code</h2>
+      <div class="about-grid">
+        <div class="about-copy reveal-up">
+          <p>
+            I'm a 20-year-old Computer Science student at Concepcion Holy Cross College with a strong
+            interest in software engineering, frontend development, artificial intelligence, and UI/UX
+            design. I like turning ideas into elegant, responsive, and scalable applications — and I'm
+            always chasing the next technology worth learning.
+          </p>
+          <p>
+            My goal is to grow into a full-stack software engineer who builds digital products that
+            create real, measurable impact — for teams, businesses, and the people who use what I build.
+          </p>
+          <div class="about-mission glass">
+            <p class="mission-label">Personal mission</p>
+            <p class="mission-text">"Learn deeply, build honestly, and ship things people actually enjoy using."</p>
+          </div>
+        </div>
+        <div class="about-timeline">
+          <div class="timeline-item reveal-up">
+            <span class="timeline-dot"></span>
+            <p class="timeline-year">2024</p>
+            <p class="timeline-title">Started BSCS</p>
+            <p class="timeline-desc">Began Computer Science studies at Concepcion Holy Cross College, focusing on programming fundamentals and problem solving.</p>
+          </div>
+          <div class="timeline-item reveal-up">
+            <span class="timeline-dot"></span>
+            <p class="timeline-year">2024-2025</p>
+            <p class="timeline-title">Frontend focus</p>
+            <p class="timeline-desc">Deepened skills in HTML5, CSS3, and JavaScript; including website designing started building responsive, animated web interfaces.</p>
+          </div>
+          <div class="timeline-item reveal-up">
+            <span class="timeline-dot"></span>
+            <p class="timeline-year">2025-2026</p>
+            <p class="timeline-title">Real-world projects</p>
+            <p class="timeline-desc">Applied web development and spreadsheet systems to real business needs, including client websites and internal tools.</p>
+          </div>
+          <div class="timeline-item reveal-up">
+            <span class="timeline-dot"></span>
+            <p class="timeline-year">2026-Now</p>
+            <p class="timeline-title">Building toward system that works and promotes changes.</p>
+            <p class="timeline-desc">Exploring AI integration, backend systems, and databases while refining UI/UX craft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Skills</p>
+      <h2 class="section-title reveal-up">What I work with</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card glass reveal-up" data-tilt>
+          <h3>Programming</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">JavaScript</span><span class="bar"><span class="bar-fill" data-value="88"></span></span></li>
+            <li><span class="skill-name">Java</span><span class="bar"><span class="bar-fill" data-value="80"></span></span></li>
+            <li><span class="skill-name">Python</span><span class="bar"><span class="bar-fill" data-value="78"></span></span></li>
+            <li><span class="skill-name">HTML5 / CSS3</span><span class="bar"><span class="bar-fill" data-value="92"></span></span></li>
+            <li><span class="skill-name">SQL</span><span class="bar"><span class="bar-fill" data-value="75"></span></span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal-up" data-tilt>
+          <h3>Frontend</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Responsive Design</span><span class="bar"><span class="bar-fill" data-value="90"></span></span></li>
+            <li><span class="skill-name">CSS Grid &amp; Flexbox</span><span class="bar"><span class="bar-fill" data-value="88"></span></span></li>
+            <li><span class="skill-name">Animation</span><span class="bar"><span class="bar-fill" data-value="82"></span></span></li>
+            <li><span class="skill-name">DOM / Interactive UI</span><span class="bar"><span class="bar-fill" data-value="85"></span></span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal-up" data-tilt>
+          <h3>Backend &amp; Data</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">REST API Integration</span><span class="bar"><span class="bar-fill" data-value="72"></span></span></li>
+            <li><span class="skill-name">CRUD Systems</span><span class="bar"><span class="bar-fill" data-value="76"></span></span></li>
+            <li><span class="skill-name">MySQL / DB Design</span><span class="bar"><span class="bar-fill" data-value="74"></span></span></li>
+            <li><span class="skill-name">Authentication</span><span class="bar"><span class="bar-fill" data-value="68"></span></span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal-up" data-tilt>
+          <h3>AI &amp; Tools</h3>
+          <ul class="skill-bars">
+            <li><span class="skill-name">Prompt Engineering</span><span class="bar"><span class="bar-fill" data-value="85"></span></span></li>
+            <li><span class="skill-name">AI Workflow Design</span><span class="bar"><span class="bar-fill" data-value="80"></span></span></li>
+            <li><span class="skill-name">Git &amp; GitHub</span><span class="bar"><span class="bar-fill" data-value="83"></span></span></li>
+            <li><span class="skill-name">Figma / Canva</span><span class="bar"><span class="bar-fill" data-value="78"></span></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TECH STACK ICONS -->
+      <div class="tech-stack reveal-up">
+        <p class="tech-stack-label">Tech stack</p>
+        <div class="tech-icons">
+          <div class="tech-icon" data-name="HTML5"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 2h18l-1.6 18L12 22l-7.4-2L3 2zm14.7 4.2H7.3l.2 2.2h9.9l-.6 6.6-4.8 1.4-4.8-1.4-.3-3.3h2.2l.2 1.6 2.7.8 2.7-.8.3-3H7.1l-.6-6.6h11l-.2 2.5z"/></svg><span>HTML5</span></div>
+          <div class="tech-icon" data-name="CSS3"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 2h18l-1.6 18L12 22l-7.4-2L3 2zm14.7 4.2H7.3l.2 2.2h9.9l-.7 8-4.7 1.4-4.8-1.4-.3-3.3h2.2l.2 1.6 2.7.8 2.7-.8.3-3.5H7l-.6-6.6h11.5l-.2 2.6z"/></svg><span>CSS3</span></div>
+          <div class="tech-icon" data-name="JavaScript"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M2 2h20v20H2V2zm10.7 16.4c.4.8 1.2 1.4 2.5 1.4 1.4 0 2.4-.7 2.4-2.3v-6.2h-1.9v6.1c0 .8-.3 1-.8 1-.5 0-.8-.3-1-.8l-1.2.8zm-6-.2c.4.7 1.2 1.6 2.7 1.6 1.6 0 2.7-.9 2.7-2.7 0-1.7-1-2.4-2.4-3l-.5-.2c-.7-.3-1-.5-1-1 0-.4.3-.7.9-.7.5 0 .8.2 1.1.7l1.5-1c-.6-1-1.5-1.5-2.6-1.5-1.6 0-2.7 1-2.7 2.5 0 1.6 1 2.3 2.2 2.8l.5.2c.8.3 1.2.6 1.2 1.1 0 .5-.4.8-1.1.8-.8 0-1.3-.4-1.7-1l-1.6.9z"/></svg><span>JavaScript</span></div>
+          <div class="tech-icon" data-name="Python"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M11.9 2c-4.4 0-4.1 1.9-4.1 1.9v2h4.2v.6H5.8S3 6.2 3 10.7s2.5 4.4 2.5 4.4h1.6v-2.2s-.1-2.5 2.5-2.5h4.1s2.4 0 2.4-2.3V4.3S16.4 2 11.9 2zM9.6 3.4c.5 0 .8.4.8.8s-.4.8-.8.8-.8-.4-.8-.8.3-.8.8-.8zM12 22c4.4 0 4.1-1.9 4.1-1.9v-2H12v-.6h6.2S21 15.8 21 11.3s-2.5-4.4-2.5-4.4h-1.6v2.2s.1 2.5-2.5 2.5H10s-2.4 0-2.4 2.3v3.8S7.6 22 12 22zm2.3-1.4c-.5 0-.8-.4-.8-.8s.4-.8.8-.8.8.4.8.8-.3.8-.8.8z"/></svg><span>Python</span></div>
+          <div class="tech-icon" data-name="Java"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.9 17.5s-1 .6.7.8c2 .3 3.1.2 5.4-.2 0 0 .6.4 1.4.7-5.1 2.2-11.5-.1-7.5-1.3zm-.6-2.7s-1.1.8.6 1c2.2.2 3.9.2 6.9-.3 0 0 .4.4 1 .6-6.1 1.8-13 .1-8.5-1.3zM13.5 9c1.3 1.4-.3 2.7-.3 2.7s3.1-1.6 1.7-3.6c-1.3-1.9-2.3-2.8 3.1-6 0 0-8.5 2.1-4.5 6.9zM19 19.4s.7.6-.8 1c-2.8.9-11.7 1.1-14.2 0-.9-.4.8-.9 1.3-1 .6-.1.9-.1.9-.1-1-.7-6.6 1.4-2.8 2 10.3 1.7 18.7-.8 15.6-1.9zM9.4 12.1s-4.7 1.1-1.7 1.5c1.3.2 3.8.1 6.1-.1 1.9-.2 3.8-.5 3.8-.5s-.7.3-1.1.6c-4.6 1.2-13.5.6-10.9-.6 2.2-1 3.8-.9 3.8-.9zm7.5 4.2c4.6-2.4 2.5-4.7 1-4.4-.4.1-.5.2-.5.2s.1-.2.4-.3c2.6-.9 4.6 2.7-1 4.7 0 0 .1-.1.1-.2z"/></svg><span>Java</span></div>
+          <div class="tech-icon" data-name="MySQL"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16v2H4V5zm0 4h16v2H4V9zm0 4h10v2H4v-2zm0 4h8v2H4v-2zM17 15c1.7 0 3 1 3 2.5S18.7 20 17 20c-.6 0-1.1-.1-1.5-.4l.4-.9c.3.2.6.3 1 .3.9 0 1.6-.5 1.6-1.2S18 16.7 17 16.7c-.4 0-.8.1-1.1.3l-.7-.5.2-2.7h3v1h-2.1l-.1 1c.2 0 .5-.1.8-.1z"/></svg><span>MySQL</span></div>
+          <div class="tech-icon" data-name="Git"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 11.3l-8.9-8.9c-.5-.5-1.4-.5-2 0l-1.9 1.9 2.4 2.4c.6-.2 1.3 0 1.7.5.5.5.6 1.2.5 1.7l2.3 2.3c.6-.2 1.3 0 1.7.5.7.7.7 1.7 0 2.4-.7.7-1.7.7-2.4 0-.5-.5-.6-1.3-.4-1.9l-2.2-2.2v5.6c.2.1.3.2.5.3.7.7.7 1.7 0 2.4-.7.7-1.7.7-2.4 0-.7-.7-.7-1.7 0-2.4.2-.2.3-.3.5-.3V9.9c-.2-.1-.3-.2-.5-.3-.5-.5-.6-1.2-.5-1.8L8.1 5.6l-5.7 5.7c-.5.5-.5 1.4 0 2l8.9 8.9c.5.5 1.4.5 2 0l8.3-8.3c.6-.6.6-1.5 0-2.1z"/></svg><span>Git</span></div>
+          <div class="tech-icon" data-name="GitHub"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.8 9.4.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.6-.1-.3-.5-1.3.1-2.8 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.5-.3s1.7.1 2.5.3c1.9-1.3 2.7-1 2.7-1 .6 1.5.2 2.5.1 2.8.6.6 1 1.5 1 2.6 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg><span>GitHub</span></div>
+          <div class="tech-icon" data-name="VS Code"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 2l-6.5 6L5 3 3 4.5v15L5 21l5.5-5 6.5 6 3-1.5V3.5L17 2zm0 4.2v11.6L11.8 12 17 6.2zM5 7.5l3 4.5-3 4.5v-9z"/></svg><span>VS Code</span></div>
+          <div class="tech-icon" data-name="Figma"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 24a4 4 0 0 1 0-8h4v4a4 4 0 0 1-4 4zM4 12a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4zM4 4a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4zM12 0h4a4 4 0 0 1 0 8h-4V0zM20 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg><span>Figma</span></div>
+          <div class="tech-icon" data-name="Canva"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path fill="var(--bg-color,#0a0a12)" d="M12.5 6.5c-3.3 0-5.8 2.4-5.8 5.6 0 3.1 2.3 5.4 5.3 5.4 1.7 0 2.9-.6 3.7-1.4l-.7-.9c-.6.5-1.5.9-2.7.9-1.9 0-3.4-1.4-3.4-3.7v-.2c.1-2.2 1.6-3.6 3.5-3.6.9 0 1.6.3 2.1.6l.5-1.1c-.7-.4-1.6-.6-2.5-.6z"/></svg><span>Canva</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Services</p>
+      <h2 class="section-title reveal-up">How I can help</h2>
+      <div class="services-grid">
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Frontend Development</h3>
+          <p>Clean, component-driven interfaces built with modern HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+          <h3>Responsive Websites</h3>
+          <p>Layouts engineered mobile-first, so every screen size feels intentional, not adapted.</p>
+        </div>
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3l3 6 6 1-4.5 4.4 1 6.1L12 17l-5.5 3.5 1-6.1L3 10l6-1z"/></svg></div>
+          <h3>UI / UX Design</h3>
+          <p>Wireframes and interfaces designed around how real users think, scan, and decide.</p>
+        </div>
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2a5 5 0 0 0-5 5c0 2 1 3 2 4l1 1v4h4v-4l1-1c1-1 2-2 2-4a5 5 0 0 0-5-5zM9 20h6"/></svg></div>
+          <h3>AI Integration</h3>
+          <p>Practical prompt engineering and AI-assisted workflows woven into real products.</p>
+        </div>
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z"/></svg></div>
+          <h3>Web Applications</h3>
+          <p>Interactive, data-driven web apps with thoughtful state and CRUD flows.</p>
+        </div>
+        <div class="service-card glass reveal-up">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M8 3H5v18h14V3h-3M8 3v4h8V3M8 3a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2"/></svg></div>
+          <h3>Software Development</h3>
+          <p>End-to-end builds — from database design to the interface people actually touch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Projects</p>
+      <h2 class="section-title reveal-up">Selected work</h2>
+      <div class="project-filters reveal-up" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
+        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card glass reveal-up" data-category="ai" data-tilt>
+          <div class="project-thumb" style="--c1:#6366F1;--c2:#8B5CF6;">
+            <span class="thumb-tag">AI</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 6l6 4-6 4M14 18h6"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>AI Chat Application</h3>
+            <p>A conversational chat interface with prompt handling, message streaming UI, and a clean chat-bubble layout.</p>
+            <div class="project-tags"><span>JavaScript</span><span>REST API</span><span>Prompt Engineering</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn" aria-label="View AI Chat Application on GitHub">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill" aria-label="View live demo of AI Chat Application">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-category="web" data-tilt>
+          <div class="project-thumb" style="--c1:#06B6D4;--c2:#6366F1;">
+            <span class="thumb-tag">Web App</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 5h16v14H4zM4 9h16M8 13h4"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>Student Management System</h3>
+            <p>A CRUD system for managing student records, grades, and attendance with a MySQL backend.</p>
+            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>CRUD</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-category="design" data-tilt>
+          <div class="project-thumb" style="--c1:#8B5CF6;--c2:#06B6D4;">
+            <span class="thumb-tag">Design</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 20l4-1 10-10-3-3L5 16z"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>This very site — a dark, glassmorphic personal portfolio with scroll-driven motion design.</p>
+            <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-category="web" data-tilt>
+          <div class="project-thumb" style="--c1:#10B981;--c2:#06B6D4;">
+            <span class="thumb-tag">Web App</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M5 12l4 4 10-10"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>Task Management System</h3>
+            <p>A drag-friendly task board with priority tags, due dates, and local persistence.</p>
+            <div class="project-tags"><span>JavaScript</span><span>DOM</span><span>Local Storage</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-category="web" data-tilt>
+          <div class="project-thumb" style="--c1:#F59E0B;--c2:#8B5CF6;">
+            <span class="thumb-tag">Web App</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M12 3v3M4.2 7l2 1.7M19.8 7l-2 1.7M5 14a7 7 0 0 1 14 0M3 14h18"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>Weather Dashboard</h3>
+            <p>A live weather lookup dashboard consuming a public REST API with animated condition icons.</p>
+            <div class="project-tags"><span>JavaScript</span><span>REST API</span><span>CSS Grid</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal-up" data-category="web" data-tilt>
+          <div class="project-thumb" style="--c1:#6366F1;--c2:#10B981;">
+            <span class="thumb-tag">Web App</span>
+            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 6h18M6 6v14h12V6M9 10v6M15 10v6"/></svg>
+          </div>
+          <div class="project-body">
+            <h3>E-Commerce Website</h3>
+            <p>A product catalog with cart logic, filtering, and checkout flow built for a small storefront.</p>
+            <div class="project-tags"><span>JavaScript</span><span>MySQL</span><span>Authentication</span></div>
+            <div class="project-links">
+              <a href="#" class="proj-btn">GitHub</a>
+              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section class="section" id="resume">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Resume</p>
+      <h2 class="section-title reveal-up">Quick overview</h2>
+      <div class="resume-grid">
+        <div class="resume-card glass reveal-up">
+          <h3>Education</h3>
+          <div class="resume-item">
+            <p class="resume-item-title">BS in Computer Science</p>
+            <p class="resume-item-sub">Concepcion Holy Cross College · 2024 – Present</p>
+          </div>
+        </div>
+        <div class="resume-card glass reveal-up">
+          <h3>Core Skills</h3>
+          <div class="resume-tags">
+            <span>Designer</span><span>Java</span><span>Python</span><span>SQL</span>
+            <span>HTML5/CSS3</span><span>Git</span><span>Squarespace</span><span>Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="resume-card glass reveal-up">
+          <h3>Focus Areas</h3>
+          <div class="resume-item">
+            <p class="resume-item-title">Frontend Development · UI/UX Design</p>
+            <p class="resume-item-sub">AI Workflows · Web Applications</p>
+          </div>
+        </div>
+      </div>
+      <div class="resume-download reveal-up">
+        <a href="RESUME-Oronos-Fiel.pdf" class="btn btn-primary magnetic" download>
+          <span>Download Full Resume (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section class="section section-alt" id="certificates">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Certificates</p>
+      <h2 class="section-title reveal-up">Learning &amp; credentials</h2>
+      <div class="cert-grid">
+        <div class="cert-card glass reveal-up">
+          <div class="cert-ribbon">Certificate</div>
+          <h3>Web Development Fundamentals</h3>
+          <p class="cert-sub">This certification covers the foundational structure and styling of modern web pages. You will master HTML5 structure, CSS3 styling, and basic JavaScript programming logic. The curriculum delivers skills in page layout, DOM manipulation, and website hosting basics. It serves as the mandatory entry point for all software engineering careers.</p>
+        </div>
+        <div class="cert-card glass reveal-up">
+          <div class="cert-ribbon">Certificate</div>
+          <h3>Responsive Design Principles</h3>
+          <p class="cert-sub">This course focuses on building websites that adapt flawlessly to any screen size. You will study fluid grids, flexible images, and CSS media queries. The training teaches mobile-first development, breakpoints, and responsive typography. This credential is vital for modern front-end developers and UI/UX designers.</p>
+        </div>
+        <div class="cert-card glass reveal-up">
+          <div class="cert-ribbon">Certificate</div>
+          <h3>Introduction to Databases</h3>
+          <p class="cert-sub">This program teaches you how to store, manage, and retrieve data efficiently. The core lessons cover relational database structures, SQL syntax, and database schema design. You will practice writing SELECT statements, joining tables, and applying data normalization techniques. This skillset is critical for backend development, data analysis, and system administration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Achievements</p>
+      <h2 class="section-title reveal-up">In numbers</h2>
+      <div class="counters-grid">
+        <div class="counter-card glass reveal-up">
+          <p class="counter-num" data-target="2">0</p>
+          <p class="counter-label">Projects Built</p>
+        </div>
+        <div class="counter-card glass reveal-up">
+          <p class="counter-num" data-target="1">0</p>
+          <p class="counter-label">Years Coding</p>
+        </div>
+        <div class="counter-card glass reveal-up">
+          <p class="counter-num" data-target="6">0</p>
+          <p class="counter-label">Core Technologies</p>
+        </div>
+        <div class="counter-card glass reveal-up">
+          <p class="counter-num" data-target="100">0</p>
+          <p class="counter-label">% Committed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <p class="section-eyebrow reveal-up">Testimonials</p>
+      <h2 class="section-title reveal-up">What people say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card glass reveal-up">
+          <p class="testimonial-quote">"Fiel picks up new tools fast and delivers clean, working interfaces without much hand-holding."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">A</span>
+            <div><p class="t-name">Arieanne Dizon</p><p class="t-role">Project Collaborator</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card glass reveal-up">
+          <p class="testimonial-quote">"Reliable, detail-oriented, and genuinely curious about how things work under the hood."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">B</span>
+            <div><p class="t-name">Brix Magalang</p><p class="t-role">Faculty / Mentor</p></div>
+          </div>
+        </div>
+        <div class="testimonial-card glass reveal-up">
+          <p class="testimonial-quote">"Turned a rough idea into a working prototype in a short amount of time — great communication throughout."</p>
+          <div class="testimonial-author">
+            <span class="testimonial-avatar">C</span>
+            <div><p class="t-name">Christopher Martin</p><p class="t-role">Client</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy reveal-up">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Let's build something</h2>
+        <p class="contact-desc">Have a project, an opportunity, or just want to talk tech? My inbox is open.</p>
+        <ul class="contact-info">
+          <li><span class="contact-label">Email</span><a href="mailto:oronosfielmark@gmail.com">oronosfielmark@gmail.com</a></li>
+          <li><span class="contact-label">Phone</span><span>+63 994 236 7362</span></li>
+          <li><span class="contact-label">Location</span><span>San Nicolas Balas, Concepcion, Tarlac, Philippines</span></li>
+        </ul>
+        <div class="contact-socials">
+          <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap glass reveal-up">
+        <div id="contactForm">
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="button" class="btn btn-primary magnetic" id="cf-submit"><span>Send Message</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <span class="logo-mark">F<span class="logo-dot">.</span></span>
+      <p class="footer-tagline">Building modern web experiences, intelligent software, and user-centered digital solutions.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-socials">
+      <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:fielmark.oronos@example.com">Email</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Fiel Mark E. Oronos. All rights reserved.</p>
+    <button id="backToTop" aria-label="Back to top">↑ Top</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
