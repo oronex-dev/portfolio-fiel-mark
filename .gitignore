@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.test-results/
+__pycache__/
+/RESUME-Oronos-Fiel.pdf
+/settings.json
+/assets/manifest.json
+/docs/*.md
+/docs/*.json

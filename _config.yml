@@ -1,0 +1,11 @@
+exclude:
+  - README.md
+  - Oronos_Formal.jpg
+  - Oronex Logo Concepts & Style Guide.png
+  - docs
+  - tools
+  - settings.json
+  - RESUME-Oronos-Fiel.pdf
+  - assets/projects.json
+  - assets/certificates.json
+  - assets/manifest.json

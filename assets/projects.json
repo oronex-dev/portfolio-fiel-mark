@@ -1,0 +1,130 @@
+[
+  {
+    "id": "hicool",
+    "category": "website",
+    "label": "Client Website",
+    "title": "HiCOOL PH",
+    "subtitle": "Industrial Business Website",
+    "description": "Responsive business website customization and frontend design for an industrial cold-storage and ice supply business.",
+    "contribution": "Squarespace customization, page layouts, product presentation, HTML/CSS styling, and responsive improvements.",
+    "technologies": ["Squarespace", "HTML", "CSS"],
+    "status": "Ongoing client work",
+    "image": "assets/images/projects/hicool.webp",
+    "alt": "Public HiCOOL PH business website homepage",
+    "source": "https://www.hicoolph.com/",
+    "links": [["Visit Website", "https://www.hicoolph.com/"]]
+  },
+  {
+    "id": "sbaa",
+    "category": "application",
+    "label": "Full-Stack Academic Team Project",
+    "title": "SBAA School Management Portal",
+    "subtitle": "",
+    "description": "A role-based school portal supporting administrative, faculty, and student workflows. An academic team project in ongoing development.",
+    "contribution": "Frontend and backend implementation, interface refinement, and database/API integration as part of the team.",
+    "technologies": ["Vue.js", "JavaScript", "Node.js", "Express", "MySQL"],
+    "status": "Academic development",
+    "image": "assets/images/projects/sbaa-admin-dashboard.webp",
+    "alt": "SBAA School Management Portal administrator dashboard with fictional demo data",
+    "showcase": {
+      "kind": "sbaa",
+      "image": "assets/images/projects/sbaa-admin-dashboard.webp",
+      "imageAlt": "Authentic SBAA administrator dashboard using fictional demonstration data",
+      "headline": "One connected platform for school management.",
+      "features": [
+        "Role-based access",
+        "Student and faculty workflows",
+        "Academic records",
+        "Class and schedule management"
+      ]
+    },
+    "source": "https://sbaa-school-portal.pages.dev/login",
+    "links": [
+      [
+        "View Portal · Login required",
+        "https://sbaa-school-portal.pages.dev/login"
+      ],
+      [
+        "GitHub Repository",
+        "https://github.com/oronex-dev/sbaa-school-management"
+      ]
+    ]
+  },
+  {
+    "id": "mindful-journal",
+    "category": "application",
+    "label": "Cross-Platform Flutter Application",
+    "title": "Mindful Journal",
+    "subtitle": "",
+    "description": "A personalized journaling application with mood check-ins, writing tools, calendar history, and locally stored entries.",
+    "contribution": "Application design and development with Flutter and Dart. The repository documents local persistence; the currently hosted web preview keeps entries only for the session.",
+    "technologies": ["Flutter", "Dart", "Local Storage"],
+    "status": "Personal project",
+    "image": "assets/images/projects/mindful-home.webp",
+    "alt": "Mindful Journal home screen from the running application",
+    "showcase": {
+      "kind": "mindful",
+      "image": "assets/images/projects/mindful-home.webp",
+      "imageAlt": "Authentic Mindful Journal home screen from the running application",
+      "calendarImage": "assets/images/projects/mindful-calendar.webp",
+      "calendarImageAlt": "Authentic Mindful Journal calendar and mood history screen",
+      "headline": "A little space for yourself.",
+      "features": [
+        "Mood check-ins",
+        "Personal journaling",
+        "Calendar history",
+        "Search and filtering",
+        "Profile preferences"
+      ]
+    },
+    "source": "https://mindful-journal-fiel.web.app",
+    "links": [
+      ["Explore Web App", "https://mindful-journal-fiel.web.app"],
+      [
+        "GitHub Repository",
+        "https://github.com/oronex-dev/mindful-journal-flutter"
+      ]
+    ]
+  },
+  {
+    "id": "twogethera",
+    "category": "application",
+    "label": "Private Flutter Application",
+    "title": "Twogethera",
+    "subtitle": "A Private Shared Planning App",
+    "description": "A private shared-planning application designed to help two partners organize plans, important dates, goals, and everyday activities in one connected space.",
+    "contribution": "Application design and development for shared planning, global search, dashboard customization, partner linking, and important dates and goals.",
+    "technologies": ["Flutter", "Dart"],
+    "status": "Private application preview",
+    "image": "assets/images/projects/twogethera-live-dashboard.webp",
+    "alt": "Twogethera supplied app capture showing its shared-space dashboard",
+    "source": "Private application; no public source or download link",
+    "showcase": {
+      "icon": "assets/images/projects/twogethera-icon.png",
+      "iconAlt": "Twogethera application icon",
+      "screen": "assets/images/projects/twogethera-phone-design-preview.webp",
+      "screenAlt": "Twogethera mobile interface design preview, labeled as a design preview",
+      "capture": "assets/images/projects/twogethera-live-dashboard.webp",
+      "kicker": "A shared space for two",
+      "tagline": "Plan what matters, together.",
+      "caption": "Mobile design preview"
+    },
+    "links": [["Discuss an app project", "#contact"]]
+  },
+  {
+    "id": "portfolio",
+    "spotlight": false,
+    "category": "website",
+    "label": "Frontend Website",
+    "title": "ORONEX Personal Portfolio",
+    "subtitle": "",
+    "description": "A responsive personal website bringing together selected projects, professional experience, and continued learning.",
+    "contribution": "Website design, accessible interactions, responsive implementation, and professional content using the original static stack.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "status": "Continually evolving",
+    "image": "assets/images/projects/portfolio.webp",
+    "alt": "ORONEX personal portfolio homepage with Fiel Mark’s portrait",
+    "source": "Local portfolio preview",
+    "links": [["Explore Portfolio", "#home"], ["GitHub Repository", "https://github.com/oronex-dev/portfolio-fiel-mark"]]
+  }
+]

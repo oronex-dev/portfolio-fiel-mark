@@ -1,624 +1,1004 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fiel Mark E. Oronos — Frontend Developer & CS Student</title>
-<meta name="description" content="Fiel Mark E. Oronos is a Computer Science student and frontend developer building modern web experiences, intelligent software, and user-centered digital solutions.">
-<meta name="keywords" content="Fiel Mark Oronos, Frontend Developer, Computer Science Student, UI/UX Designer, Web Developer Philippines, Portfolio">
-<meta name="author" content="Fiel Mark E. Oronos">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://fielmarkoronos.dev/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fiel Mark E. Oronos — Frontend Developer & CS Student">
-<meta property="og:description" content="Building modern web experiences, intelligent software, and user-centered digital solutions.">
-<meta property="og:image" content="assets/og-cover.png">
-<meta property="og:url" content="https://fielmarkoronos.dev/">
-<meta property="og:site_name" content="Fiel Mark E. Oronos Portfolio">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fiel Mark E. Oronos — Frontend Developer & CS Student">
-<meta name="twitter:description" content="Building modern web experiences, intelligent software, and user-centered digital solutions.">
-<meta name="twitter:image" content="assets/og-cover.png">
-
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="Oronex Logo Concepts & Style Guide.png">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Fiel Mark Estañol Oronos",
-  "alternateName": "Fiel Mark E. Oronos",
-  "jobTitle": "Frontend Developer",
-  "description": "Computer Science student and frontend developer building modern web experiences, intelligent software, and user-centered digital solutions.",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Concepcion Holy Cross College"
-  },
-  "knowsAbout": ["JavaScript", "Frontend Development", "UI/UX Design", "Artificial Intelligence", "Java", "Python"]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<a class="skip-link" href="#main-content">Skip to main content</a>
-
-<!-- ============ LOADING SCREEN ============ -->
-<div id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <svg class="loader-mark" viewBox="0 0 100 100" width="64" height="64">
-      <circle class="loader-ring" cx="50" cy="50" r="42"></circle>
-      <text x="50" y="62" text-anchor="middle" class="loader-letter">F</text>
-    </svg>
-    <div class="loader-bar"><span id="loader-progress"></span></div>
-    <p class="loader-text">Loading portfolio<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
-  </div>
-</div>
-
-<!-- ============ AURORA BACKDROP ============ -->
-<canvas id="aurora-canvas" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-<!-- ============ NAVIGATION ============ -->
-<header class="site-header" id="siteHeader">
-  <nav class="nav" aria-label="Primary navigation">
-    <a href="#hero" class="nav-logo" aria-label="Fiel Mark Oronos, back to top">
-      <span class="logo-mark">F<span class="logo-dot">.</span></span>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about"><span class="nav-num">01</span>About</a></li>
-      <li><a href="#skills"><span class="nav-num">02</span>Skills</a></li>
-      <li><a href="#services"><span class="nav-num">03</span>Services</a></li>
-      <li><a href="#projects"><span class="nav-num">04</span>Projects</a></li>
-      <li><a href="#resume"><span class="nav-num">05</span>Resume</a></li>
-      <li><a href="#contact"><span class="nav-num">06</span>Contact</a></li>
-    </ul>
-    <a href="#contact" class="btn btn-small btn-primary nav-cta">Let's Talk</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</header>
-
-<!-- ============ MOBILE FULLSCREEN MENU ============ -->
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <ul>
-    <li><a href="#about" data-index="01">About</a></li>
-    <li><a href="#skills" data-index="02">Skills</a></li>
-    <li><a href="#services" data-index="03">Services</a></li>
-    <li><a href="#projects" data-index="04">Projects</a></li>
-    <li><a href="#resume" data-index="05">Resume</a></li>
-    <li><a href="#contact" data-index="06">Contact</a></li>
-  </ul>
-  <div class="mobile-menu-socials">
-    <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:oronosfielmark@gmail.com">Email</a>
-  </div>
-</div>
-
-<main id="main-content">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="hero">
-    <div class="hero-shape hero-shape-1" aria-hidden="true"></div>
-    <div class="hero-shape hero-shape-2" aria-hidden="true"></div>
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow reveal-up"><span class="eyebrow-dot"></span>Available for opportunities</p>
-        <h1 class="hero-title">
-          <span class="reveal-up" style="--d:0.05s">Hi, I'm</span>
-          <span class="hero-name reveal-up" style="--d:0.15s">Fiel Mark<br>E. Oronos</span>
-        </h1>
-        <p class="hero-role reveal-up" style="--d:0.25s">
-          <span id="typedRole"></span><span class="type-cursor">|</span>
-        </p>
-        <p class="hero-summary reveal-up" style="--d:0.35s">
-          Building modern web experiences, intelligent software, and user-centered digital solutions —
-          one clean line of code at a time.
-        </p>
-        <div class="hero-cta reveal-up" style="--d:0.45s">
-          <a href="RESUME-Oronos-Fiel.pdf" class="btn btn-primary magnetic" download>
-            <span>Download Resume</span>
-          </a>
-          <a href="#projects" class="btn btn-ghost magnetic">
-            <span>View Projects</span>
-          </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080B14" />
+    <title>Fiel Mark E. Oronos — Web Developer & Designer | ORONEX</title>
+    <meta
+      name="description"
+      content="Fiel Mark E. Oronos is a Computer Science student in Tarlac, Philippines, building responsive websites, practical applications, and organized digital workflows."
+    />
+    <link
+      rel="canonical"
+      href="https://oronex-dev.github.io/portfolio-fiel-mark/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Fiel Mark E. Oronos — Web Developer & Designer"
+    />
+    <meta
+      property="og:description"
+      content="Responsive websites. Practical applications. Thoughtful digital experiences. Explore the work of Fiel Mark E. Oronos."
+    />
+    <meta
+      property="og:url"
+      content="https://oronex-dev.github.io/portfolio-fiel-mark/"
+    />
+    <meta
+      property="og:image"
+      content="https://oronex-dev.github.io/portfolio-fiel-mark/assets/images/social-preview.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="ORONEX — Fiel Mark E. Oronos, Web Developer & Designer"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fiel Mark E. Oronos — ORONEX" />
+    <meta
+      name="twitter:description"
+      content="Web development, design, and digital support. Explore my selected work."
+    />
+    <meta
+      name="twitter:image"
+      content="https://oronex-dev.github.io/portfolio-fiel-mark/assets/images/social-preview.png"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/images/profile/fiel-mark.webp"
+      as="image"
+    />
+    <script>
+      // Set navigation mode before first paint to avoid a mobile menu collapse.
+      // With JavaScript disabled, the full navigation remains visible.
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fiel Mark E. Oronos",
+        "alternateName": "ORONEX",
+        "url": "https://oronex-dev.github.io/portfolio-fiel-mark/",
+        "sameAs": [
+          "https://github.com/oronex-dev",
+          "https://www.linkedin.com/in/fielmarkoronos/"
+        ],
+        "email": "mailto:oronosfielmark@gmail.com",
+        "jobTitle": "Web Developer & Designer",
+        "description": "Computer Science student building responsive websites and practical applications.",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Concepcion, Tarlac, Philippines"
+        }
+      }
+    </script>
+    <script src="config.js" defer></script>
+    <script
+      src="script.js"
+      defer
+      onerror="document.documentElement.classList.remove('js')"
+    ></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="ORONEX home"
+          ><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M16 3 28 10v13l-12 7L4 23V10Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+            <path
+              d="m11 11 10 10m0-10L11 21"
+              stroke="currentColor"
+              stroke-width="2"
+            /></svg
+          >ORONEX<span class="brand-dot">.</span></a
+        >
+        <div class="nav-panel" id="nav-panel">
+          <a href="#home" class="mobile-home">Home</a><a href="#about">About</a
+          ><a href="#projects">Projects</a><a href="#skills">Skills</a
+          ><a href="#services">Services</a>
+          <details class="nav-more" open>
+            <summary>More <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-dropdown">
+              <a href="#experience">Experience</a><a href="#resume">Resume</a
+              ><a href="#certifications">Certifications</a>
+            </div>
+          </details>
+          <a class="button button-small" href="#contact"
+            >Let's Talk <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <div class="hero-socials reveal-up" style="--d:0.55s">
-          <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener" aria-label="GitHub profile">GH</a>
-          <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener" aria-label="LinkedIn profile">IN</a>
-          <a href="mailto:oronosfielmark@gmail.com" aria-label="Send an email">@</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal-up" style="--d:0.3s">
-        <div class="profile-ring">
-          <div class="profile-orbit"></div>
-          <div class="profile-card glass">
-          <img src="Oronos_Formal.jpg" class="profile-avatar" aria-hidden="true">
-            <p class="profile-caption">Computer Science<br>Student &amp; Developer</p>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-panel"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <p class="availability">
+              <span class="status-dot" aria-hidden="true"></span>Available for
+              Remote Opportunities
+            </p>
+            <h1 id="hero-title">
+              Hi, I'm<br />
+              <span class="gradient-text">Fiel Mark.</span>
+            </h1>
+            <p class="hero-role">
+              Web Designer and Developer <span class="muted">|</span>
+              Administrative Support &amp; Digital Solutions
+            </p>
+            <p class="hero-description">
+              I design responsive websites, build practical software
+              applications, and help businesses organize their digital
+              workflows.
+            </p>
+            <div class="button-row">
+              <a class="button" href="#projects"
+                >View Projects <span aria-hidden="true">↗</span></a
+              ><a class="button button-outline" href="#resume"
+                >Download Resume <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <div class="hero-socials">
+              <a
+                href="https://github.com/oronex-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub <span aria-hidden="true">↗</span></a
+              ><a
+                href="https://www.linkedin.com/in/fielmarkoronos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile"
+                ><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.44c.98 0 1.79-.77 1.79-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn <span aria-hidden="true">↗</span></a
+              ><a href="mailto:oronosfielmark@gmail.com"
+                >Email <span aria-hidden="true">↗</span></a
+              ><span class="location"
+                ><span aria-hidden="true">◎</span> Tarlac, Philippines</span
+              >
+            </div>
           </div>
-          <span class="floating-chip chip-1">Website Designing</span>
-          <span class="floating-chip chip-2">Programming</span>
-          <span class="floating-chip chip-3">Data Presentation</span>
+          <div class="hero-visual">
+            <div class="portrait-orbit" aria-hidden="true"><span></span></div>
+            <div class="portrait-frame">
+              <img
+                src="assets/images/profile/fiel-mark.webp"
+                width="1000"
+                height="1000"
+                fetchpriority="high"
+                alt="Fiel Mark E. Oronos wearing a dark suit and tie"
+              />
+            </div>
+            <span class="floating-label label-code" aria-hidden="true"
+              ><span class="label-icon">&lt;/&gt;</span> Thoughtful
+              interfaces</span
+            >
+            <span class="floating-label label-design" aria-hidden="true"
+              ><span class="mini-star">✧</span> Design meets function</span
+            >
+            <div class="portrait-note" aria-hidden="true">
+              <span class="status-dot" aria-hidden="true"></span
+              ><span>Learning. Building. Improving.</span>
+            </div>
+            <span class="visual-coordinate" aria-hidden="true"
+              >CONCEPCION / TARLAC</span
+            >
+          </div>
+        </div>
+        <div class="hero-footer container">
+          <span class="micro">CREATIVE THINKING. PRACTICAL SOLUTIONS.</span
+          ><a href="#about" class="scroll-link"
+            >Get to know me <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+      <div class="expertise-strip" role="group" aria-label="Areas of work">
+        <div class="container">
+          <span>RESPONSIVE WEBSITES</span><i aria-hidden="true">✧</i
+          ><span>PRACTICAL APPLICATIONS</span><i aria-hidden="true">✧</i
+          ><span>DIGITAL ORGANIZATION</span><i aria-hidden="true">✧</i
+          ><span>THOUGHTFUL DESIGN</span>
         </div>
       </div>
-    </div>
-    <button class="scroll-indicator" id="scrollIndicator" aria-label="Scroll to About section">
-      <span class="scroll-mouse"><span class="scroll-dot"></span></span>
-      <span class="scroll-label">Scroll</span>
-    </button>
-  </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">About</p>
-      <h2 class="section-title reveal-up">The person behind the code</h2>
-      <div class="about-grid">
-        <div class="about-copy reveal-up">
-          <p>
-            I'm a 20-year-old Computer Science student at Concepcion Holy Cross College with a strong
-            interest in software engineering, frontend development, artificial intelligence, and UI/UX
-            design. I like turning ideas into elegant, responsive, and scalable applications — and I'm
-            always chasing the next technology worth learning.
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">01 / THE PERSON BEHIND THE WORK</p>
+            <h2 id="about-title">
+              Curious by nature.<br />
+              <span class="muted">Practical by design.</span>
+            </h2>
+            <p class="section-intro">
+              I'm Fiel Mark E. Oronos, a Computer Science student at Concepcion
+              Holy Cross College in the Philippines.
+            </p>
+            <a class="text-link" href="#experience"
+              >My experience <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="about-story">
+            <article class="reveal">
+              <span class="story-number">01</span>
+              <div>
+                <h3>Who I am</h3>
+                <p>
+                  I explore the space between software, business websites, and
+                  useful interfaces. I enjoy turning a clear requirement into
+                  something people can use with confidence.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span class="story-number">02</span>
+              <div>
+                <h3>What I've worked on</h3>
+                <p>
+                  From HiCOOL PH website customization to the SBAA School
+                  Management Portal and a Flutter journal, my work spans web
+                  interfaces, applications, and everyday inventory records.
+                </p>
+              </div>
+            </article>
+            <article class="reveal">
+              <span class="story-number">03</span>
+              <div>
+                <h3>Where I'm headed</h3>
+                <p>
+                  I'm building toward a career creating reliable, maintainable
+                  software and useful digital experiences, while continuing to
+                  learn modern development and cybersecurity foundations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-tinted"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">02 / SELECTED WORK</p>
+              <h2 id="projects-title">
+                Ideas made <span class="gradient-text">useful.</span>
+              </h2>
+            </div>
+            <p>
+              Client work, team projects, and personal explorations.<br />
+              A closer look at what I've actually built.
+            </p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" data-project-filter="all" aria-pressed="true">
+              All work</button
+            ><button
+              type="button"
+              data-project-filter="website"
+              aria-pressed="false"
+            >
+              Websites</button
+            ><button
+              type="button"
+              data-project-filter="application"
+              aria-pressed="false"
+            >
+              Applications
+            </button>
+          </div>
+          <p id="project-status" class="sr-only" role="status"></p>
+          <div class="projects-grid">
+            <!-- PROJECTS_START -->
+<article class="project-card reveal" data-category="website" data-project-id="hicool">
+      <a class="project-image" href="https://www.hicoolph.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore HiCOOL PH"><img
+                  src="assets/images/projects/hicool.webp"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                  alt="Public HiCOOL PH business website homepage"
+                  data-fallback="Project screenshot unavailable. Use the project link to explore the work."
+              /></a>
+      <div class="project-body"><div class="project-meta"><span class="project-category">Client Website</span><span class="project-state">Ongoing client work</span></div><h3>HiCOOL PH</h3><p class="project-description">Responsive business website customization and frontend design for an industrial cold-storage and ice supply business.</p><p class="contribution"><strong>My contribution:</strong> Squarespace customization, page layouts, product presentation, HTML/CSS styling, and responsive improvements.</p><ul class="tags" aria-label="Technologies"><li>Squarespace</li><li>HTML</li><li>CSS</li></ul><div class="project-links"><a href="https://www.hicoolph.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Website — HiCOOL PH">Visit Website <span aria-hidden="true">↗</span></a></div></div>
+    </article>
+<article class="project-card reveal" data-category="application" data-project-id="sbaa">
+      <a class="project-image project-image--sbaa" href="https://sbaa-school-portal.pages.dev/login" target="_blank" rel="noopener noreferrer" aria-label="Preview the SBAA School Portal administrator dashboard"><div class="sbaa-showcase" aria-hidden="true">
+        <div class="sbaa-browser">
+          <div class="sbaa-browser-bar"><span class="sbaa-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SBAA School Portal</span><span class="sbaa-browser-domain">Academic project preview</span></div>
+          <img src="assets/images/projects/sbaa-admin-dashboard.webp" width="1400" height="752" loading="lazy" alt="Authentic SBAA administrator dashboard using fictional demonstration data">
+        </div>
+      </div></a>
+      <div class="project-body"><div class="project-meta"><span class="project-category">Full-Stack Academic Team Project</span><span class="project-state">Academic development</span></div><h3>SBAA School Management Portal</h3><p class="project-showcase-headline">One connected platform for school management.</p><p class="project-description">A role-based school portal supporting administrative, faculty, and student workflows. An academic team project in ongoing development.</p><p class="contribution"><strong>My contribution:</strong> Frontend and backend implementation, interface refinement, and database/API integration as part of the team.</p><ul class="project-features" aria-label="Selected project features"><li>Role-based access</li><li>Student and faculty workflows</li><li>Academic records</li><li>Class and schedule management</li></ul><ul class="tags" aria-label="Technologies"><li>Vue.js</li><li>JavaScript</li><li>Node.js</li><li>Express</li><li>MySQL</li></ul><div class="project-links"><a href="https://sbaa-school-portal.pages.dev/login" target="_blank" rel="noopener noreferrer" aria-label="View Portal · Login required — SBAA School Management Portal">View Portal · Login required <span aria-hidden="true">↗</span></a><a href="https://github.com/oronex-dev/sbaa-school-management" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository — SBAA School Management Portal">GitHub Repository <span aria-hidden="true">↗</span></a></div></div>
+    </article>
+<article class="project-card reveal" data-category="application" data-project-id="mindful-journal">
+      <a class="project-image project-image--mindful" href="https://mindful-journal-fiel.web.app" target="_blank" rel="noopener noreferrer" aria-label="Preview Mindful Journal home and calendar screens"><div class="mindful-showcase" aria-hidden="true">
+        <div class="mindful-showcase-copy">
+          <p class="mindful-showcase-kicker">Mindful Journal</p>
+          <p class="mindful-showcase-headline">A little space for yourself.</p>
+          <p class="mindful-showcase-caption">Write · Reflect · Revisit</p>
+        </div>
+        <div class="mindful-screen-gallery">
+          <div class="mindful-phone mindful-phone--home">
+            <span class="mindful-phone-speaker"></span>
+            <img src="assets/images/projects/mindful-home.webp" width="519" height="1050" loading="lazy" alt="">
+          </div>
+          <div class="mindful-phone mindful-phone--calendar">
+            <span class="mindful-phone-speaker"></span>
+            <img src="assets/images/projects/mindful-calendar.webp" width="513" height="1050" loading="lazy" alt="">
+          </div>
+        </div>
+      </div></a>
+      <div class="project-body"><div class="project-meta"><span class="project-category">Cross-Platform Flutter Application</span><span class="project-state">Personal project</span></div><h3>Mindful Journal</h3><p class="project-showcase-headline">A little space for yourself.</p><p class="project-description">A personalized journaling application with mood check-ins, writing tools, calendar history, and locally stored entries.</p><p class="contribution"><strong>My contribution:</strong> Application design and development with Flutter and Dart. The repository documents local persistence; the currently hosted web preview keeps entries only for the session.</p><ul class="project-features" aria-label="Selected project features"><li>Mood check-ins</li><li>Personal journaling</li><li>Calendar history</li><li>Search and filtering</li><li>Profile preferences</li></ul><ul class="tags" aria-label="Technologies"><li>Flutter</li><li>Dart</li><li>Local Storage</li></ul><div class="project-links"><a href="https://mindful-journal-fiel.web.app" target="_blank" rel="noopener noreferrer" aria-label="Explore Web App — Mindful Journal">Explore Web App <span aria-hidden="true">↗</span></a><a href="https://github.com/oronex-dev/mindful-journal-flutter" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository — Mindful Journal">GitHub Repository <span aria-hidden="true">↗</span></a></div></div>
+    </article>
+<article class="project-card reveal" data-category="application" data-project-id="twogethera">
+      <a class="project-image project-image--product" href="#contact" aria-label="Preview Twogethera — a private shared planning app"><div class="product-showcase" aria-label="Twogethera mobile application preview">
+        <img class="product-showcase-capture" src="assets/images/projects/twogethera-live-dashboard.webp" width="2396" height="1426" loading="lazy" alt="" aria-hidden="true">
+        <div class="product-showcase-copy">
+          <img class="product-showcase-icon" src="assets/images/projects/twogethera-icon.png" width="64" height="64" loading="lazy" alt="Twogethera application icon">
+          <p class="product-showcase-kicker">A shared space for two</p>
+          <p class="product-showcase-tagline">Plan what matters, together.</p>
+          <span class="product-showcase-platform">Flutter · iOS · Android · Web</span>
+        </div>
+        <div class="product-phone" aria-hidden="true">
+          <span class="product-phone-speaker"></span>
+          <img src="assets/images/projects/twogethera-phone-design-preview.webp" width="390" height="844" loading="lazy" alt="">
+        </div>
+        <span class="product-showcase-caption">Mobile design preview</span>
+      </div></a>
+      <div class="project-body"><div class="project-meta"><span class="project-category">Private Flutter Application</span><span class="project-state">Private application preview</span></div><h3>Twogethera</h3><p class="project-description">A private shared-planning application designed to help two partners organize plans, important dates, goals, and everyday activities in one connected space.</p><p class="contribution"><strong>My contribution:</strong> Application design and development for shared planning, global search, dashboard customization, partner linking, and important dates and goals.</p><ul class="tags" aria-label="Technologies"><li>Flutter</li><li>Dart</li></ul><div class="project-links"><a href="#contact" aria-label="Discuss an app project — Twogethera">Discuss an app project <span aria-hidden="true">↗</span></a></div></div>
+    </article>
+<!-- PROJECTS_END -->
+          </div>
+          <div class="work-note">
+            <span aria-hidden="true">↳</span>
+            <p>
+              My administrative work also includes inventory and account
+              records. Business documents stay private; public samples will be
+              added only with approval.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">03 / MY TOOLKIT</p>
+              <h2 id="skills-title">Tools for the task.</h2>
+            </div>
+            <p>
+              A growing toolkit, grounded in project work<br />
+              and continued learning.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <span class="card-symbol" aria-hidden="true">&lt;/&gt;</span>
+              <h3>Frontend Development</h3>
+              <p>Responsive pages and clear, interactive interfaces.</p>
+              <ul class="tags">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Vue.js</li>
+                <li>Responsive Web Design</li>
+                <li>Interface Styling</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="card-symbol" aria-hidden="true">{ }</span>
+              <h3>Backend & Databases</h3>
+              <p>Application foundations and connected data.</p>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MySQL</li>
+                <li>REST API Integration</li>
+                <li>Python</li>
+                <li>Database Fundamentals</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="card-symbol" aria-hidden="true">⌘</span>
+              <h3>Design & Development Tools</h3>
+              <p>Tools I use to build, organize, and refine.</p>
+              <ul class="tags">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Visual Studio Code</li>
+                <li>Squarespace</li>
+                <li>Canva</li>
+                <li>AI-assisted Development</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="card-symbol" aria-hidden="true">▤</span>
+              <h3>Administrative & Productivity</h3>
+              <p>Structured records and dependable documentation.</p>
+              <ul class="tags">
+                <li>Google Sheets</li>
+                <li>Microsoft Excel</li>
+                <li>Microsoft Word</li>
+                <li>WPS Office</li>
+                <li>Google Drive</li>
+                <li>Document Management</li>
+                <li>Inventory Records</li>
+                <li>Data Entry</li>
+              </ul>
+            </article>
+          </div>
+          <div class="learning-note reveal">
+            <span class="card-symbol" aria-hidden="true">◇</span>
+            <div>
+              <h3>Always adding to the toolkit.</h3>
+              <p>
+                Learning cybersecurity foundations through Google's introductory
+                Coursera course, alongside ongoing web and application
+                development.
+              </p>
+            </div>
+            <a class="text-link" href="#certifications"
+              >Explore credentials <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-tinted"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">04 / HOW I CAN HELP</p>
+              <h2 id="services-title">
+                Your next step,<br />
+                <span class="muted">made a little easier.</span>
+              </h2>
+            </div>
+            <a class="text-link" href="#contact"
+              >Let's discuss your project <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <span class="service-index">01 /</span>
+              <h3>Responsive Website Development</h3>
+              <p>
+                Business and personal website pages that adapt to desktop,
+                tablet, and mobile screens.
+              </p>
+              <a
+                href="#contact"
+                aria-label="Discuss responsive website development"
+                >Build your website <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card reveal">
+              <span class="service-index">02 /</span>
+              <h3>Business Website Customization</h3>
+              <p>
+                Squarespace layouts, navigation, and page sections shaped around
+                your business content.
+              </p>
+              <a
+                href="#contact"
+                aria-label="Discuss business website customization"
+                >Refine your website <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card reveal">
+              <span class="service-index">03 /</span>
+              <h3>Frontend Interface Development</h3>
+              <p>
+                Clean, interactive web interfaces built from your designs and
+                documented requirements.
+              </p>
+              <a
+                href="#contact"
+                aria-label="Discuss frontend interface development"
+                >Bring an interface to life
+                <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card reveal">
+              <span class="service-index">04 /</span>
+              <h3>Administrative & Spreadsheet Support</h3>
+              <p>
+                Organized spreadsheets, inventory records, and digital documents
+                for day-to-day operations.
+              </p>
+              <a
+                href="#contact"
+                aria-label="Discuss administrative and spreadsheet support"
+                >Organize your workflow <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card reveal">
+              <span class="service-index">05 /</span>
+              <h3>Website Maintenance & Updates</h3>
+              <p>
+                Content changes, styling adjustments, and responsive
+                improvements to existing web pages.
+              </p>
+              <a href="#contact" aria-label="Discuss website maintenance"
+                >Keep things up to date <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card reveal">
+              <span class="service-index">06 /</span>
+              <h3>Digital Design Support</h3>
+              <p>
+                Basic branded layouts and digital materials created with Canva
+                for consistent presentation.
+              </p>
+              <a href="#contact" aria-label="Discuss digital design support"
+                >Shape your next design <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="container experience-grid">
+          <div class="experience-intro">
+            <p class="eyebrow">05 / EXPERIENCE & EDUCATION</p>
+            <h2 id="experience-title">
+              Learning through<br />
+              <span class="gradient-text">real work.</span>
+            </h2>
+            <p class="section-intro">
+              Building useful things, supporting everyday operations, and
+              growing with every project.
+            </p>
+            <div class="education">
+              <span class="micro">CURRENTLY STUDYING</span>
+              <h3>BS in Computer Science</h3>
+              <p>
+                Concepcion Holy Cross College<br />
+                2024 – Present
+              </p>
+            </div>
+          </div>
+          <div class="timeline">
+            <article class="timeline-card reveal">
+              <p class="timeline-date">JANUARY 2026 – PRESENT</p>
+              <h3>Website Developer</h3>
+              <p class="timeline-company">
+                HiCOOL PH / HiCOOL Ice Plant · Client Project
+              </p>
+              <ul>
+                <li>
+                  Develop and customize responsive Squarespace website sections.
+                </li>
+                <li>
+                  Refine landing pages, navigation, and product presentations.
+                </li>
+                <li>
+                  Implement HTML/CSS styling and review desktop and mobile
+                  layouts.
+                </li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://www.hicoolph.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit HiCOOL PH <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="timeline-card reveal">
+              <p class="timeline-date">NOVEMBER 2024 – PRESENT</p>
+              <h3>Administrative & Inventory Support</h3>
+              <p class="timeline-company">
+                8327 Ever Ani Farm Enterprises · Part-Time
+              </p>
+              <ul>
+                <li>
+                  Maintain hardware inventory records using Google Sheets.
+                </li>
+                <li>Organize receipts and transaction documents.</li>
+                <li>
+                  Update business and product records and support daily
+                  operations.
+                </li>
+              </ul>
+            </article>
+            <article class="timeline-card reveal">
+              <p class="timeline-date">AUGUST 2024 – OCTOBER 2025</p>
+              <h3>Computer Laboratory Intern</h3>
+              <p class="timeline-company">Concepcion Holy Cross College</p>
+              <ul>
+                <li>
+                  Monitor laboratory computers and support classroom operations.
+                </li>
+                <li>
+                  Encode information in Microsoft Excel and organize Google
+                  Drive records.
+                </li>
+                <li>Assist instructors with workstation preparation.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section section-tinted"
+        id="resume"
+        aria-labelledby="resume-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">06 / THE DETAILS, IN A DOCUMENT</p>
+              <h2 id="resume-title">A resume for the role.</h2>
+            </div>
+            <p>
+              Two areas of focus.<br />
+              The same care in the work.
+            </p>
+          </div>
+          <div class="resume-grid">
+            <article class="resume-card reveal">
+              <span class="card-symbol" aria-hidden="true">&lt;/&gt;</span>
+              <h3>Web Developer</h3>
+              <p>
+                Website development, responsive interfaces, and practical
+                application projects.
+              </p>
+              <span class="availability-note">Role-specific resume PDF</span>
+              <div class="button-row">
+                <a
+                  class="button button-outline"
+                  href="assets/resumes/Oronos_Resume_WebDev_Final.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-document="assets/resumes/Oronos_Resume_WebDev_Final.pdf"
+                  data-title="Web Developer Resume"
+                  data-kind="pdf"
+                  aria-label="Preview Web Developer resume PDF"
+                  >View Resume</a
+                ><a
+                  class="button button-outline"
+                  href="assets/resumes/Oronos_Resume_WebDev_Final.pdf"
+                  download="Oronos_Resume_WebDev_Final.pdf"
+                  aria-label="Download Web Developer resume PDF"
+                  >Download PDF</a
+                >
+              </div>
+            </article>
+            <article class="resume-card reveal">
+              <span class="card-symbol" aria-hidden="true">▤</span>
+              <h3>Administrative Support</h3>
+              <p>
+                Spreadsheet records, document organization, and everyday digital
+                operations.
+              </p>
+              <span class="availability-note">Role-specific resume PDF</span>
+              <div class="button-row">
+                <a
+                  class="button button-outline"
+                  href="assets/resumes/Oronos_Resume_AdminSupport_Final.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-document="assets/resumes/Oronos_Resume_AdminSupport_Final.pdf"
+                  data-title="Administrative Support Resume"
+                  data-kind="pdf"
+                  aria-label="Preview Administrative Support resume PDF"
+                  >View Resume</a
+                ><a
+                  class="button button-outline"
+                  href="assets/resumes/Oronos_Resume_AdminSupport_Final.pdf"
+                  download="Oronos_Resume_AdminSupport_Final.pdf"
+                  aria-label="Download Administrative Support resume PDF"
+                  >Download PDF</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="certifications"
+        aria-labelledby="certifications-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">07 / KEEPING THE CURIOSITY ALIVE</p>
+              <h2 id="certifications-title">
+                Professional Development<br />
+                <span class="muted">& Certifications.</span>
+              </h2>
+            </div>
+            <p>
+              Continued learning in development, data,<br />
+              design, and cybersecurity foundations.
+            </p>
+          </div>
+          <p class="evidence-note">
+            Course completion details are transcribed from my supplied
+            certificates. Issuer verification links are included where the
+            document provides one.
           </p>
-          <p>
-            My goal is to grow into a full-stack software engineer who builds digital products that
-            create real, measurable impact — for teams, businesses, and the people who use what I build.
-          </p>
-          <div class="about-mission glass">
-            <p class="mission-label">Personal mission</p>
-            <p class="mission-text">"Learn deeply, build honestly, and ship things people actually enjoy using."</p>
+          <div class="filters" role="group" aria-label="Filter certificates">
+            <button
+              type="button"
+              data-certificate-filter="all"
+              aria-pressed="true"
+            >
+              All learning</button
+            ><button
+              type="button"
+              data-certificate-filter="Cybersecurity"
+              aria-pressed="false"
+            >
+              Cybersecurity</button
+            ><button
+              type="button"
+              data-certificate-filter="Data & Spreadsheets"
+              aria-pressed="false"
+            >
+              Data & Spreadsheets</button
+            ><button
+              type="button"
+              data-certificate-filter="IT Foundations"
+              aria-pressed="false"
+            >
+              IT Foundations</button
+            ><button
+              type="button"
+              data-certificate-filter="Design & Branding"
+              aria-pressed="false"
+            >
+              Design & Branding
+            </button>
+          </div>
+          <p class="sr-only" id="certificate-status" role="status"></p>
+          <div class="certificates-grid">
+            <!-- CERTIFICATES_START -->
+<article class="certificate-card reveal" data-category="Cybersecurity"><a class="certificate-image" href="assets/certificates/cybersecurity.pdf" data-document="assets/images/certificates/cybersecurity.webp" data-pdf="assets/certificates/cybersecurity.pdf" data-title="Foundations of Cybersecurity" data-kind="image" aria-label="View certificate: Foundations of Cybersecurity"><img src="assets/images/certificates/cybersecurity.webp" loading="lazy" width="640" height="450" alt="Foundations of Cybersecurity completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Cybersecurity</p><h3>Foundations of Cybersecurity</h3><p class="certificate-issuer">Google · Coursera</p><p class="certificate-date"><time datetime="2026-10-31">October 31, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/cybersecurity.pdf" data-document="assets/images/certificates/cybersecurity.webp" data-pdf="assets/certificates/cybersecurity.pdf" data-title="Foundations of Cybersecurity" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/3HYNQ3KTZOKX" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Foundations of Cybersecurity">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="Data &amp; Spreadsheets"><a class="certificate-image" href="assets/certificates/business-analysis.pdf" data-document="assets/images/certificates/business-analysis.webp" data-pdf="assets/certificates/business-analysis.pdf" data-title="Introduction to Business Analysis Using Spreadsheets: Basics" data-kind="image" aria-label="View certificate: Introduction to Business Analysis Using Spreadsheets: Basics"><img src="assets/images/certificates/business-analysis.webp" loading="lazy" width="640" height="450" alt="Introduction to Business Analysis Using Spreadsheets: Basics completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Data &amp; Spreadsheets</p><h3>Introduction to Business Analysis Using Spreadsheets: Basics</h3><p class="certificate-issuer">Coursera</p><p class="certificate-date"><time datetime="2026-05-09">May 9, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/business-analysis.pdf" data-document="assets/images/certificates/business-analysis.webp" data-pdf="assets/certificates/business-analysis.pdf" data-title="Introduction to Business Analysis Using Spreadsheets: Basics" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/H0EOX73HV78J" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Introduction to Business Analysis Using Spreadsheets: Basics">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="Data &amp; Spreadsheets"><a class="certificate-image" href="assets/certificates/data-analysis.pdf" data-document="assets/images/certificates/data-analysis.webp" data-pdf="assets/certificates/data-analysis.pdf" data-title="Introduction to Data Analysis using Microsoft Excel" data-kind="image" aria-label="View certificate: Introduction to Data Analysis using Microsoft Excel"><img src="assets/images/certificates/data-analysis.webp" loading="lazy" width="640" height="450" alt="Introduction to Data Analysis using Microsoft Excel completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Data &amp; Spreadsheets</p><h3>Introduction to Data Analysis using Microsoft Excel</h3><p class="certificate-issuer">Coursera</p><p class="certificate-date"><time datetime="2026-05-09">May 9, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/data-analysis.pdf" data-document="assets/images/certificates/data-analysis.webp" data-pdf="assets/certificates/data-analysis.pdf" data-title="Introduction to Data Analysis using Microsoft Excel" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/15L3S0SEVSG0" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Introduction to Data Analysis using Microsoft Excel">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="Data &amp; Spreadsheets"><a class="certificate-image" href="assets/certificates/excel-started.pdf" data-document="assets/images/certificates/excel-started.webp" data-pdf="assets/certificates/excel-started.pdf" data-title="Getting Started with Microsoft Excel" data-kind="image" aria-label="View certificate: Getting Started with Microsoft Excel"><img src="assets/images/certificates/excel-started.webp" loading="lazy" width="640" height="450" alt="Getting Started with Microsoft Excel completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Data &amp; Spreadsheets</p><h3>Getting Started with Microsoft Excel</h3><p class="certificate-issuer">Coursera Project Network</p><p class="certificate-date"><time datetime="2025-05-27">May 27, 2025</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/excel-started.pdf" data-document="assets/images/certificates/excel-started.webp" data-pdf="assets/certificates/excel-started.pdf" data-title="Getting Started with Microsoft Excel" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/2ISMUOZGXM31" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Getting Started with Microsoft Excel">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="IT Foundations"><a class="certificate-image" href="assets/certificates/intro-css.pdf" data-document="assets/images/certificates/intro-css.webp" data-pdf="assets/certificates/intro-css.pdf" data-title="Introduction to CSS" data-kind="image" aria-label="View certificate: Introduction to CSS"><img src="assets/images/certificates/intro-css.webp" loading="lazy" width="640" height="450" alt="Introduction to CSS completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">IT Foundations</p><h3>Introduction to CSS</h3><p class="certificate-issuer">Computer Systems Servicing · Introductory course</p><p class="certificate-issuer">TESDA Online Program</p><p class="certificate-date"><time datetime="2026-04-23">April 23, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/intro-css.pdf" data-document="assets/images/certificates/intro-css.webp" data-pdf="assets/certificates/intro-css.pdf" data-title="Introduction to CSS" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a></div></div></article>
+<article class="certificate-card reveal" data-category="Data &amp; Spreadsheets"><a class="certificate-image" href="assets/certificates/excel-2016.pdf" data-document="assets/images/certificates/excel-2016.webp" data-pdf="assets/certificates/excel-2016.pdf" data-title="Excel 2016" data-kind="image" aria-label="View certificate: Excel 2016"><img src="assets/images/certificates/excel-2016.webp" loading="lazy" width="640" height="450" alt="Excel 2016 completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Data &amp; Spreadsheets</p><h3>Excel 2016</h3><p class="certificate-issuer">GCFGlobal</p><p class="certificate-date"><time datetime="2025-08-27">August 27, 2025</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/excel-2016.pdf" data-document="assets/images/certificates/excel-2016.webp" data-pdf="assets/certificates/excel-2016.pdf" data-title="Excel 2016" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><span class="certificate-date">Issuer verification unavailable</span></div></div></article>
+<article class="certificate-card reveal" data-category="Data &amp; Spreadsheets"><a class="certificate-image" href="assets/certificates/customer-support.pdf" data-document="assets/images/certificates/customer-support.webp" data-pdf="assets/certificates/customer-support.pdf" data-title="Create Customer Support Data with Google Sheets" data-kind="image" aria-label="View certificate: Create Customer Support Data with Google Sheets"><img src="assets/images/certificates/customer-support.webp" loading="lazy" width="640" height="450" alt="Create Customer Support Data with Google Sheets completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Data &amp; Spreadsheets</p><h3>Create Customer Support Data with Google Sheets</h3><p class="certificate-issuer">Coursera</p><p class="certificate-date"><time datetime="2026-05-09">May 9, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/customer-support.pdf" data-document="assets/images/certificates/customer-support.webp" data-pdf="assets/certificates/customer-support.pdf" data-title="Create Customer Support Data with Google Sheets" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/4KFIW9O28OTY" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Create Customer Support Data with Google Sheets">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="Design &amp; Branding"><a class="certificate-image" href="assets/certificates/canva-brand.pdf" data-document="assets/images/certificates/canva-brand.webp" data-pdf="assets/certificates/canva-brand.pdf" data-title="Build your business brand using Canva" data-kind="image" aria-label="View certificate: Build your business brand using Canva"><img src="assets/images/certificates/canva-brand.webp" loading="lazy" width="640" height="450" alt="Build your business brand using Canva completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Design &amp; Branding</p><h3>Build your business brand using Canva</h3><p class="certificate-issuer">Coursera</p><p class="certificate-date"><time datetime="2026-04-25">April 25, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/canva-brand.pdf" data-document="assets/images/certificates/canva-brand.webp" data-pdf="assets/certificates/canva-brand.pdf" data-title="Build your business brand using Canva" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a><a href="https://coursera.org/verify/VDIAR17HJDIX" target="_blank" rel="noopener noreferrer" aria-label="Verify credential: Build your business brand using Canva">Verify Credential ↗</a></div></div></article>
+<article class="certificate-card reveal" data-category="Design &amp; Branding"><a class="certificate-image" href="assets/certificates/canva-essentials.pdf" data-document="assets/images/certificates/canva-essentials.webp" data-pdf="assets/certificates/canva-essentials.pdf" data-title="Canva Essentials" data-kind="image" aria-label="View certificate: Canva Essentials"><img src="assets/images/certificates/canva-essentials.webp" loading="lazy" width="640" height="450" alt="Canva Essentials completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Design &amp; Branding</p><h3>Canva Essentials</h3><p class="certificate-issuer">Canva Design School</p><p class="certificate-date"><time datetime="2026-04-25">April 25, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/canva-essentials.pdf" data-document="assets/images/certificates/canva-essentials.webp" data-pdf="assets/certificates/canva-essentials.pdf" data-title="Canva Essentials" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a></div></div></article>
+<article class="certificate-card reveal" data-category="Design &amp; Branding"><a class="certificate-image" href="assets/certificates/canva-marketing.pdf" data-document="assets/images/certificates/canva-marketing.webp" data-pdf="assets/certificates/canva-marketing.pdf" data-title="Marketing with Canva" data-kind="image" aria-label="View certificate: Marketing with Canva"><img src="assets/images/certificates/canva-marketing.webp" loading="lazy" width="640" height="450" alt="Marketing with Canva completion certificate" data-fallback="Certificate preview unavailable; open the original PDF."></a><div class="certificate-body"><p class="certificate-category">Design &amp; Branding</p><h3>Marketing with Canva</h3><p class="certificate-issuer">Canva Design School</p><p class="certificate-date"><time datetime="2026-05-07">May 7, 2026</time></p><div class="certificate-links"><a class="text-link" href="assets/certificates/canva-marketing.pdf" data-document="assets/images/certificates/canva-marketing.webp" data-pdf="assets/certificates/canva-marketing.pdf" data-title="Marketing with Canva" data-kind="image">View Certificate <span aria-hidden="true">↗</span></a></div></div></article>
+<!-- CERTIFICATES_END -->
           </div>
         </div>
-        <div class="about-timeline">
-          <div class="timeline-item reveal-up">
-            <span class="timeline-dot"></span>
-            <p class="timeline-year">2024</p>
-            <p class="timeline-title">Started BSCS</p>
-            <p class="timeline-desc">Began Computer Science studies at Concepcion Holy Cross College, focusing on programming fundamentals and problem solving.</p>
-          </div>
-          <div class="timeline-item reveal-up">
-            <span class="timeline-dot"></span>
-            <p class="timeline-year">2024-2025</p>
-            <p class="timeline-title">Frontend focus</p>
-            <p class="timeline-desc">Deepened skills in HTML5, CSS3, and JavaScript; including website designing started building responsive, animated web interfaces.</p>
-          </div>
-          <div class="timeline-item reveal-up">
-            <span class="timeline-dot"></span>
-            <p class="timeline-year">2025-2026</p>
-            <p class="timeline-title">Real-world projects</p>
-            <p class="timeline-desc">Applied web development and spreadsheet systems to real business needs, including client websites and internal tools.</p>
-          </div>
-          <div class="timeline-item reveal-up">
-            <span class="timeline-dot"></span>
-            <p class="timeline-year">2026-Now</p>
-            <p class="timeline-title">Building toward system that works and promotes changes.</p>
-            <p class="timeline-desc">Exploring AI integration, backend systems, and databases while refining UI/UX craft.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ============ SKILLS ============ -->
-  <section class="section section-alt" id="skills">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Skills</p>
-      <h2 class="section-title reveal-up">What I work with</h2>
-      <div class="skills-grid">
-
-        <div class="skill-card glass reveal-up" data-tilt>
-          <h3>Programming</h3>
-          <ul class="skill-bars">
-            <li><span class="skill-name">JavaScript</span><span class="bar"><span class="bar-fill" data-value="88"></span></span></li>
-            <li><span class="skill-name">Java</span><span class="bar"><span class="bar-fill" data-value="80"></span></span></li>
-            <li><span class="skill-name">Python</span><span class="bar"><span class="bar-fill" data-value="78"></span></span></li>
-            <li><span class="skill-name">HTML5 / CSS3</span><span class="bar"><span class="bar-fill" data-value="92"></span></span></li>
-            <li><span class="skill-name">SQL</span><span class="bar"><span class="bar-fill" data-value="75"></span></span></li>
-          </ul>
-        </div>
-
-        <div class="skill-card glass reveal-up" data-tilt>
-          <h3>Frontend</h3>
-          <ul class="skill-bars">
-            <li><span class="skill-name">Responsive Design</span><span class="bar"><span class="bar-fill" data-value="90"></span></span></li>
-            <li><span class="skill-name">CSS Grid &amp; Flexbox</span><span class="bar"><span class="bar-fill" data-value="88"></span></span></li>
-            <li><span class="skill-name">Animation</span><span class="bar"><span class="bar-fill" data-value="82"></span></span></li>
-            <li><span class="skill-name">DOM / Interactive UI</span><span class="bar"><span class="bar-fill" data-value="85"></span></span></li>
-          </ul>
-        </div>
-
-        <div class="skill-card glass reveal-up" data-tilt>
-          <h3>Backend &amp; Data</h3>
-          <ul class="skill-bars">
-            <li><span class="skill-name">REST API Integration</span><span class="bar"><span class="bar-fill" data-value="72"></span></span></li>
-            <li><span class="skill-name">CRUD Systems</span><span class="bar"><span class="bar-fill" data-value="76"></span></span></li>
-            <li><span class="skill-name">MySQL / DB Design</span><span class="bar"><span class="bar-fill" data-value="74"></span></span></li>
-            <li><span class="skill-name">Authentication</span><span class="bar"><span class="bar-fill" data-value="68"></span></span></li>
-          </ul>
-        </div>
-
-        <div class="skill-card glass reveal-up" data-tilt>
-          <h3>AI &amp; Tools</h3>
-          <ul class="skill-bars">
-            <li><span class="skill-name">Prompt Engineering</span><span class="bar"><span class="bar-fill" data-value="85"></span></span></li>
-            <li><span class="skill-name">AI Workflow Design</span><span class="bar"><span class="bar-fill" data-value="80"></span></span></li>
-            <li><span class="skill-name">Git &amp; GitHub</span><span class="bar"><span class="bar-fill" data-value="83"></span></span></li>
-            <li><span class="skill-name">Figma / Canva</span><span class="bar"><span class="bar-fill" data-value="78"></span></span></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- TECH STACK ICONS -->
-      <div class="tech-stack reveal-up">
-        <p class="tech-stack-label">Tech stack</p>
-        <div class="tech-icons">
-          <div class="tech-icon" data-name="HTML5"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 2h18l-1.6 18L12 22l-7.4-2L3 2zm14.7 4.2H7.3l.2 2.2h9.9l-.6 6.6-4.8 1.4-4.8-1.4-.3-3.3h2.2l.2 1.6 2.7.8 2.7-.8.3-3H7.1l-.6-6.6h11l-.2 2.5z"/></svg><span>HTML5</span></div>
-          <div class="tech-icon" data-name="CSS3"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 2h18l-1.6 18L12 22l-7.4-2L3 2zm14.7 4.2H7.3l.2 2.2h9.9l-.7 8-4.7 1.4-4.8-1.4-.3-3.3h2.2l.2 1.6 2.7.8 2.7-.8.3-3.5H7l-.6-6.6h11.5l-.2 2.6z"/></svg><span>CSS3</span></div>
-          <div class="tech-icon" data-name="JavaScript"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M2 2h20v20H2V2zm10.7 16.4c.4.8 1.2 1.4 2.5 1.4 1.4 0 2.4-.7 2.4-2.3v-6.2h-1.9v6.1c0 .8-.3 1-.8 1-.5 0-.8-.3-1-.8l-1.2.8zm-6-.2c.4.7 1.2 1.6 2.7 1.6 1.6 0 2.7-.9 2.7-2.7 0-1.7-1-2.4-2.4-3l-.5-.2c-.7-.3-1-.5-1-1 0-.4.3-.7.9-.7.5 0 .8.2 1.1.7l1.5-1c-.6-1-1.5-1.5-2.6-1.5-1.6 0-2.7 1-2.7 2.5 0 1.6 1 2.3 2.2 2.8l.5.2c.8.3 1.2.6 1.2 1.1 0 .5-.4.8-1.1.8-.8 0-1.3-.4-1.7-1l-1.6.9z"/></svg><span>JavaScript</span></div>
-          <div class="tech-icon" data-name="Python"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M11.9 2c-4.4 0-4.1 1.9-4.1 1.9v2h4.2v.6H5.8S3 6.2 3 10.7s2.5 4.4 2.5 4.4h1.6v-2.2s-.1-2.5 2.5-2.5h4.1s2.4 0 2.4-2.3V4.3S16.4 2 11.9 2zM9.6 3.4c.5 0 .8.4.8.8s-.4.8-.8.8-.8-.4-.8-.8.3-.8.8-.8zM12 22c4.4 0 4.1-1.9 4.1-1.9v-2H12v-.6h6.2S21 15.8 21 11.3s-2.5-4.4-2.5-4.4h-1.6v2.2s.1 2.5-2.5 2.5H10s-2.4 0-2.4 2.3v3.8S7.6 22 12 22zm2.3-1.4c-.5 0-.8-.4-.8-.8s.4-.8.8-.8.8.4.8.8-.3.8-.8.8z"/></svg><span>Python</span></div>
-          <div class="tech-icon" data-name="Java"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.9 17.5s-1 .6.7.8c2 .3 3.1.2 5.4-.2 0 0 .6.4 1.4.7-5.1 2.2-11.5-.1-7.5-1.3zm-.6-2.7s-1.1.8.6 1c2.2.2 3.9.2 6.9-.3 0 0 .4.4 1 .6-6.1 1.8-13 .1-8.5-1.3zM13.5 9c1.3 1.4-.3 2.7-.3 2.7s3.1-1.6 1.7-3.6c-1.3-1.9-2.3-2.8 3.1-6 0 0-8.5 2.1-4.5 6.9zM19 19.4s.7.6-.8 1c-2.8.9-11.7 1.1-14.2 0-.9-.4.8-.9 1.3-1 .6-.1.9-.1.9-.1-1-.7-6.6 1.4-2.8 2 10.3 1.7 18.7-.8 15.6-1.9zM9.4 12.1s-4.7 1.1-1.7 1.5c1.3.2 3.8.1 6.1-.1 1.9-.2 3.8-.5 3.8-.5s-.7.3-1.1.6c-4.6 1.2-13.5.6-10.9-.6 2.2-1 3.8-.9 3.8-.9zm7.5 4.2c4.6-2.4 2.5-4.7 1-4.4-.4.1-.5.2-.5.2s.1-.2.4-.3c2.6-.9 4.6 2.7-1 4.7 0 0 .1-.1.1-.2z"/></svg><span>Java</span></div>
-          <div class="tech-icon" data-name="MySQL"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16v2H4V5zm0 4h16v2H4V9zm0 4h10v2H4v-2zm0 4h8v2H4v-2zM17 15c1.7 0 3 1 3 2.5S18.7 20 17 20c-.6 0-1.1-.1-1.5-.4l.4-.9c.3.2.6.3 1 .3.9 0 1.6-.5 1.6-1.2S18 16.7 17 16.7c-.4 0-.8.1-1.1.3l-.7-.5.2-2.7h3v1h-2.1l-.1 1c.2 0 .5-.1.8-.1z"/></svg><span>MySQL</span></div>
-          <div class="tech-icon" data-name="Git"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 11.3l-8.9-8.9c-.5-.5-1.4-.5-2 0l-1.9 1.9 2.4 2.4c.6-.2 1.3 0 1.7.5.5.5.6 1.2.5 1.7l2.3 2.3c.6-.2 1.3 0 1.7.5.7.7.7 1.7 0 2.4-.7.7-1.7.7-2.4 0-.5-.5-.6-1.3-.4-1.9l-2.2-2.2v5.6c.2.1.3.2.5.3.7.7.7 1.7 0 2.4-.7.7-1.7.7-2.4 0-.7-.7-.7-1.7 0-2.4.2-.2.3-.3.5-.3V9.9c-.2-.1-.3-.2-.5-.3-.5-.5-.6-1.2-.5-1.8L8.1 5.6l-5.7 5.7c-.5.5-.5 1.4 0 2l8.9 8.9c.5.5 1.4.5 2 0l8.3-8.3c.6-.6.6-1.5 0-2.1z"/></svg><span>Git</span></div>
-          <div class="tech-icon" data-name="GitHub"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.8 9.4.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.6-.1-.3-.5-1.3.1-2.8 0 0 .8-.3 2.7 1 .8-.2 1.6-.3 2.5-.3s1.7.1 2.5.3c1.9-1.3 2.7-1 2.7-1 .6 1.5.2 2.5.1 2.8.6.6 1 1.5 1 2.6 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10z"/></svg><span>GitHub</span></div>
-          <div class="tech-icon" data-name="VS Code"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 2l-6.5 6L5 3 3 4.5v15L5 21l5.5-5 6.5 6 3-1.5V3.5L17 2zm0 4.2v11.6L11.8 12 17 6.2zM5 7.5l3 4.5-3 4.5v-9z"/></svg><span>VS Code</span></div>
-          <div class="tech-icon" data-name="Figma"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 24a4 4 0 0 1 0-8h4v4a4 4 0 0 1-4 4zM4 12a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4zM4 4a4 4 0 0 1 4-4h4v8H8a4 4 0 0 1-4-4zM12 0h4a4 4 0 0 1 0 8h-4V0zM20 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg><span>Figma</span></div>
-          <div class="tech-icon" data-name="Canva"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path fill="var(--bg-color,#0a0a12)" d="M12.5 6.5c-3.3 0-5.8 2.4-5.8 5.6 0 3.1 2.3 5.4 5.3 5.4 1.7 0 2.9-.6 3.7-1.4l-.7-.9c-.6.5-1.5.9-2.7.9-1.9 0-3.4-1.4-3.4-3.7v-.2c.1-2.2 1.6-3.6 3.5-3.6.9 0 1.6.3 2.1.6l.5-1.1c-.7-.4-1.6-.6-2.5-.6z"/></svg><span>Canva</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section class="section" id="services">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Services</p>
-      <h2 class="section-title reveal-up">How I can help</h2>
-      <div class="services-grid">
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h10"/></svg></div>
-          <h3>Frontend Development</h3>
-          <p>Clean, component-driven interfaces built with modern HTML, CSS, and JavaScript.</p>
-        </div>
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
-          <h3>Responsive Websites</h3>
-          <p>Layouts engineered mobile-first, so every screen size feels intentional, not adapted.</p>
-        </div>
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3l3 6 6 1-4.5 4.4 1 6.1L12 17l-5.5 3.5 1-6.1L3 10l6-1z"/></svg></div>
-          <h3>UI / UX Design</h3>
-          <p>Wireframes and interfaces designed around how real users think, scan, and decide.</p>
-        </div>
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2a5 5 0 0 0-5 5c0 2 1 3 2 4l1 1v4h4v-4l1-1c1-1 2-2 2-4a5 5 0 0 0-5-5zM9 20h6"/></svg></div>
-          <h3>AI Integration</h3>
-          <p>Practical prompt engineering and AI-assisted workflows woven into real products.</p>
-        </div>
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z"/></svg></div>
-          <h3>Web Applications</h3>
-          <p>Interactive, data-driven web apps with thoughtful state and CRUD flows.</p>
-        </div>
-        <div class="service-card glass reveal-up">
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M8 3H5v18h14V3h-3M8 3v4h8V3M8 3a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2"/></svg></div>
-          <h3>Software Development</h3>
-          <p>End-to-end builds — from database design to the interface people actually touch.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Projects</p>
-      <h2 class="section-title reveal-up">Selected work</h2>
-      <div class="project-filters reveal-up" role="tablist" aria-label="Filter projects by category">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI</button>
-        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Apps</button>
-        <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
-      </div>
-      <div class="projects-grid" id="projectsGrid">
-
-        <article class="project-card glass reveal-up" data-category="ai" data-tilt>
-          <div class="project-thumb" style="--c1:#6366F1;--c2:#8B5CF6;">
-            <span class="thumb-tag">AI</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 6l6 4-6 4M14 18h6"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>AI Chat Application</h3>
-            <p>A conversational chat interface with prompt handling, message streaming UI, and a clean chat-bubble layout.</p>
-            <div class="project-tags"><span>JavaScript</span><span>REST API</span><span>Prompt Engineering</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn" aria-label="View AI Chat Application on GitHub">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill" aria-label="View live demo of AI Chat Application">Live Demo</a>
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">08 / LET'S MAKE SOMETHING USEFUL</p>
+            <h2 id="contact-title">
+              Have something<br />
+              <span class="gradient-text">in mind?</span>
+            </h2>
+            <p class="section-intro">
+              I'm open to entry-level roles, freelance website work, and
+              administrative support opportunities. Tell me what you're working
+              on.
+            </p>
+            <a class="contact-email" href="mailto:oronosfielmark@gmail.com"
+              >oronosfielmark@gmail.com <span aria-hidden="true">↗</span></a
+            >
+            <div class="contact-details">
+              <p>Concepcion, Tarlac, Philippines</p>
+              <a
+                class="text-link"
+                href="https://github.com/oronex-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Find me on GitHub <span aria-hidden="true">↗</span></a
+              >
             </div>
+            <p class="availability">
+              <span class="status-dot" aria-hidden="true"></span>Available for
+              Remote Opportunities
+            </p>
           </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-category="web" data-tilt>
-          <div class="project-thumb" style="--c1:#06B6D4;--c2:#6366F1;">
-            <span class="thumb-tag">Web App</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 5h16v14H4zM4 9h16M8 13h4"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>Student Management System</h3>
-            <p>A CRUD system for managing student records, grades, and attendance with a MySQL backend.</p>
-            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>CRUD</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/mrppjrwz"
+            method="post"
+          >
+            <h3>Start a conversation</h3>
+            <p class="form-note" id="form-note">
+              Send a message using the secure form.
+            </p>
+            <div class="form-field">
+              <label for="contact-name">Full name</label
+              ><input
+                id="contact-name"
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="100"
+                aria-describedby="name-error"
+                placeholder="Your name"
+              />
+              <p class="field-error" id="name-error"></p>
             </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-category="design" data-tilt>
-          <div class="project-thumb" style="--c1:#8B5CF6;--c2:#06B6D4;">
-            <span class="thumb-tag">Design</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 20l4-1 10-10-3-3L5 16z"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>Portfolio Website</h3>
-            <p>This very site — a dark, glassmorphic personal portfolio with scroll-driven motion design.</p>
-            <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            <div class="form-field">
+              <label for="contact-email">Email address</label
+              ><input
+                id="contact-email"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                maxlength="254"
+                aria-describedby="email-error"
+                placeholder="you@example.com"
+              />
+              <p class="field-error" id="email-error"></p>
             </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-category="web" data-tilt>
-          <div class="project-thumb" style="--c1:#10B981;--c2:#06B6D4;">
-            <span class="thumb-tag">Web App</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M5 12l4 4 10-10"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>Task Management System</h3>
-            <p>A drag-friendly task board with priority tags, due dates, and local persistence.</p>
-            <div class="project-tags"><span>JavaScript</span><span>DOM</span><span>Local Storage</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            <div class="form-field">
+              <label for="contact-message">What's on your mind?</label
+              ><textarea
+                id="contact-message"
+                name="message"
+                required
+                minlength="10"
+                maxlength="5000"
+                rows="4"
+                aria-describedby="message-error"
+                placeholder="A little about your project or opportunity…"
+              ></textarea>
+              <p class="field-error" id="message-error"></p>
             </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-category="web" data-tilt>
-          <div class="project-thumb" style="--c1:#F59E0B;--c2:#8B5CF6;">
-            <span class="thumb-tag">Web App</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M12 3v3M4.2 7l2 1.7M19.8 7l-2 1.7M5 14a7 7 0 0 1 14 0M3 14h18"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>Weather Dashboard</h3>
-            <p>A live weather lookup dashboard consuming a public REST API with animated condition icons.</p>
-            <div class="project-tags"><span>JavaScript</span><span>REST API</span><span>CSS Grid</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            <div class="honeypot" aria-hidden="true">
+              <label for="company-site">Leave this field empty</label
+              ><input
+                id="company-site"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              />
             </div>
-          </div>
-        </article>
-
-        <article class="project-card glass reveal-up" data-category="web" data-tilt>
-          <div class="project-thumb" style="--c1:#6366F1;--c2:#10B981;">
-            <span class="thumb-tag">Web App</span>
-            <svg viewBox="0 0 24 24" class="thumb-icon"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 6h18M6 6v14h12V6M9 10v6M15 10v6"/></svg>
-          </div>
-          <div class="project-body">
-            <h3>E-Commerce Website</h3>
-            <p>A product catalog with cart logic, filtering, and checkout flow built for a small storefront.</p>
-            <div class="project-tags"><span>JavaScript</span><span>MySQL</span><span>Authentication</span></div>
-            <div class="project-links">
-              <a href="#" class="proj-btn">GitHub</a>
-              <a href="#" class="proj-btn proj-btn-fill">Live Demo</a>
+            <input
+              type="hidden"
+              name="subject"
+              value="New ORONEX portfolio inquiry"
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New ORONEX portfolio inquiry"
+            />
+            <div class="turnstile-field">
+              <p class="turnstile-label" id="turnstile-label">
+                Security verification
+              </p>
+              <div
+                class="turnstile-widget"
+                id="turnstile-widget"
+                role="group"
+                aria-labelledby="turnstile-label"
+                aria-describedby="turnstile-status"
+              ></div>
+              <p
+                class="turnstile-status"
+                id="turnstile-status"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                Loading security verification…
+              </p>
             </div>
-          </div>
-        </article>
-
+            <button
+              class="button form-submit"
+              id="contact-submit"
+              type="submit"
+              disabled
+            >
+              Send Message <span aria-hidden="true">↗</span>
+            </button>
+            <p
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <noscript
+              ><p>
+                JavaScript is required to complete the security verification and
+                submit this form.
+              </p></noscript
+            >
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <a class="brand" href="#home">ORONEX<span class="brand-dot">.</span></a>
+        <p>
+          Thoughtfully built by Fiel Mark E. Oronos.<br />
+          <span>© <span id="year">2026</span> · HTML, CSS & JavaScript</span>
+        </p>
+        <a class="back-top text-link" href="#home"
+          >Back to top <span aria-hidden="true">↑</span></a
+        >
       </div>
-    </div>
-  </section>
-
-  <!-- ============ RESUME ============ -->
-  <section class="section" id="resume">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Resume</p>
-      <h2 class="section-title reveal-up">Quick overview</h2>
-      <div class="resume-grid">
-        <div class="resume-card glass reveal-up">
-          <h3>Education</h3>
-          <div class="resume-item">
-            <p class="resume-item-title">BS in Computer Science</p>
-            <p class="resume-item-sub">Concepcion Holy Cross College · 2024 – Present</p>
-          </div>
+    </footer>
+    <dialog
+      id="document-dialog"
+      aria-labelledby="dialog-title"
+      aria-describedby="dialog-help"
+    >
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">DOCUMENT VIEWER</p>
+          <h2 id="dialog-title">Document</h2>
         </div>
-        <div class="resume-card glass reveal-up">
-          <h3>Core Skills</h3>
-          <div class="resume-tags">
-            <span>Designer</span><span>Java</span><span>Python</span><span>SQL</span>
-            <span>HTML5/CSS3</span><span>Git</span><span>Squarespace</span><span>Prompt Engineering</span>
-          </div>
-        </div>
-        <div class="resume-card glass reveal-up">
-          <h3>Focus Areas</h3>
-          <div class="resume-item">
-            <p class="resume-item-title">Frontend Development · UI/UX Design</p>
-            <p class="resume-item-sub">AI Workflows · Web Applications</p>
-          </div>
-        </div>
+        <button
+          type="button"
+          class="dialog-close"
+          aria-label="Close document viewer"
+        >
+          ×
+        </button>
       </div>
-      <div class="resume-download reveal-up">
-        <a href="RESUME-Oronos-Fiel.pdf" class="btn btn-primary magnetic" download>
-          <span>Download Full Resume (PDF)</span>
-        </a>
+      <p id="dialog-help">
+        Use Escape to close. If the preview doesn't load, open the original
+        document.
+      </p>
+      <div id="document-preview" class="document-preview"></div>
+      <div class="dialog-actions">
+        <a
+          id="document-open"
+          class="button button-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open original <span aria-hidden="true">↗</span></a
+        ><a id="document-download" class="button" download
+          >Download PDF <span aria-hidden="true">↓</span></a
+        >
       </div>
-    </div>
-  </section>
-
-  <!-- ============ CERTIFICATES ============ -->
-  <section class="section section-alt" id="certificates">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Certificates</p>
-      <h2 class="section-title reveal-up">Learning &amp; credentials</h2>
-      <div class="cert-grid">
-        <div class="cert-card glass reveal-up">
-          <div class="cert-ribbon">Certificate</div>
-          <h3>Web Development Fundamentals</h3>
-          <p class="cert-sub">This certification covers the foundational structure and styling of modern web pages. You will master HTML5 structure, CSS3 styling, and basic JavaScript programming logic. The curriculum delivers skills in page layout, DOM manipulation, and website hosting basics. It serves as the mandatory entry point for all software engineering careers.</p>
-        </div>
-        <div class="cert-card glass reveal-up">
-          <div class="cert-ribbon">Certificate</div>
-          <h3>Responsive Design Principles</h3>
-          <p class="cert-sub">This course focuses on building websites that adapt flawlessly to any screen size. You will study fluid grids, flexible images, and CSS media queries. The training teaches mobile-first development, breakpoints, and responsive typography. This credential is vital for modern front-end developers and UI/UX designers.</p>
-        </div>
-        <div class="cert-card glass reveal-up">
-          <div class="cert-ribbon">Certificate</div>
-          <h3>Introduction to Databases</h3>
-          <p class="cert-sub">This program teaches you how to store, manage, and retrieve data efficiently. The core lessons cover relational database structures, SQL syntax, and database schema design. You will practice writing SELECT statements, joining tables, and applying data normalization techniques. This skillset is critical for backend development, data analysis, and system administration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ACHIEVEMENTS ============ -->
-  <section class="section" id="achievements">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Achievements</p>
-      <h2 class="section-title reveal-up">In numbers</h2>
-      <div class="counters-grid">
-        <div class="counter-card glass reveal-up">
-          <p class="counter-num" data-target="2">0</p>
-          <p class="counter-label">Projects Built</p>
-        </div>
-        <div class="counter-card glass reveal-up">
-          <p class="counter-num" data-target="1">0</p>
-          <p class="counter-label">Years Coding</p>
-        </div>
-        <div class="counter-card glass reveal-up">
-          <p class="counter-num" data-target="6">0</p>
-          <p class="counter-label">Core Technologies</p>
-        </div>
-        <div class="counter-card glass reveal-up">
-          <p class="counter-num" data-target="100">0</p>
-          <p class="counter-label">% Committed</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="section section-alt" id="testimonials">
-    <div class="container">
-      <p class="section-eyebrow reveal-up">Testimonials</p>
-      <h2 class="section-title reveal-up">What people say</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-card glass reveal-up">
-          <p class="testimonial-quote">"Fiel picks up new tools fast and delivers clean, working interfaces without much hand-holding."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-avatar">A</span>
-            <div><p class="t-name">Arieanne Dizon</p><p class="t-role">Project Collaborator</p></div>
-          </div>
-        </div>
-        <div class="testimonial-card glass reveal-up">
-          <p class="testimonial-quote">"Reliable, detail-oriented, and genuinely curious about how things work under the hood."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-avatar">B</span>
-            <div><p class="t-name">Brix Magalang</p><p class="t-role">Faculty / Mentor</p></div>
-          </div>
-        </div>
-        <div class="testimonial-card glass reveal-up">
-          <p class="testimonial-quote">"Turned a rough idea into a working prototype in a short amount of time — great communication throughout."</p>
-          <div class="testimonial-author">
-            <span class="testimonial-avatar">C</span>
-            <div><p class="t-name">Christopher Martin</p><p class="t-role">Client</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-copy reveal-up">
-        <p class="section-eyebrow">Contact</p>
-        <h2 class="section-title">Let's build something</h2>
-        <p class="contact-desc">Have a project, an opportunity, or just want to talk tech? My inbox is open.</p>
-        <ul class="contact-info">
-          <li><span class="contact-label">Email</span><a href="mailto:oronosfielmark@gmail.com">oronosfielmark@gmail.com</a></li>
-          <li><span class="contact-label">Phone</span><span>+63 994 236 7362</span></li>
-          <li><span class="contact-label">Location</span><span>San Nicolas Balas, Concepcion, Tarlac, Philippines</span></li>
-        </ul>
-        <div class="contact-socials">
-          <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div class="contact-form-wrap glass reveal-up">
-        <div id="contactForm">
-          <div class="form-row">
-            <label for="cf-name">Name</label>
-            <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name">
-          </div>
-          <div class="form-row">
-            <label for="cf-email">Email</label>
-            <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com">
-          </div>
-          <div class="form-row">
-            <label for="cf-message">Message</label>
-            <textarea id="cf-message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
-          </div>
-          <button type="button" class="btn btn-primary magnetic" id="cf-submit"><span>Send Message</span></button>
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <span class="logo-mark">F<span class="logo-dot">.</span></span>
-      <p class="footer-tagline">Building modern web experiences, intelligent software, and user-centered digital solutions.</p>
-    </div>
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="footer-socials">
-      <a href="https://github.com/Fiel-Mark15/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/fiel-mark-oronos-8a0970312" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:fielmark.oronos@example.com">Email</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>&copy; <span id="year"></span> Fiel Mark E. Oronos. All rights reserved.</p>
-    <button id="backToTop" aria-label="Back to top">↑ Top</button>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    </dialog>
+  </body>
 </html>
