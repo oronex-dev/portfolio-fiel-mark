@@ -20,7 +20,16 @@ for p in projects:
     tags = ''.join(f'<li>{e(tag)}</li>' for tag in p['technologies'])
     showcase = p.get('showcase')
     showcase_kind = showcase.get('kind', 'twogethera') if showcase else None
-    if showcase_kind == 'mindful':
+    if p['id'] == 'hicool':
+        image_content = f'''<div class="industrial-showcase" aria-hidden="true">
+        <span class="industrial-kicker">HiCOOL PH <i>·</i> COLD STORAGE &amp; ICE SUPPLY</span>
+        <div class="industrial-laptop">
+          <div class="industrial-screen"><img src="{e(p['image'])}" width="1200" height="750" loading="lazy" decoding="async" alt="" data-fallback="HiCOOL PH screenshot unavailable. Use the project link to explore the website."></div>
+          <span class="industrial-laptop-base"></span>
+        </div>
+        <span class="industrial-caption">Website presentation <i aria-hidden="true">↗</i></span>
+      </div>'''
+    elif showcase_kind == 'mindful':
         image_content = f'''<div class="mindful-showcase" aria-hidden="true">
         <div class="mindful-showcase-copy">
           <p class="mindful-showcase-kicker">Mindful Journal</p>
@@ -40,10 +49,17 @@ for p in projects:
       </div>'''
     elif showcase_kind == 'sbaa':
         image_content = f'''<div class="sbaa-showcase" aria-hidden="true">
-        <div class="sbaa-browser">
-          <div class="sbaa-browser-bar"><span class="sbaa-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SBAA School Portal</span><span class="sbaa-browser-domain">Academic project preview</span></div>
-          <img src="{e(showcase['image'])}" width="1400" height="752" loading="lazy" alt="{e(showcase['imageAlt'])}">
+        <div class="sbaa-devices">
+          <div class="sbaa-laptop">
+            <div class="sbaa-browser">
+              <div class="sbaa-browser-bar"><span class="sbaa-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SBAA School Portal</span><span class="sbaa-browser-domain">Academic preview</span></div>
+              <img src="{e(showcase['image'])}" width="1400" height="752" loading="lazy" alt="">
+            </div>
+            <span class="sbaa-laptop-base"></span>
+          </div>
+          <div class="sbaa-phone"><img src="{e(showcase['signInImage'])}" width="1200" height="750" loading="lazy" alt=""></div>
         </div>
+        <span class="sbaa-data-note">Interface preview <i>·</i> fictional demo data</span>
       </div>'''
     elif showcase:
         image_content = f'''<div class="product-showcase" aria-label="Twogethera mobile application preview">
@@ -70,6 +86,7 @@ for p in projects:
                   data-fallback="Project screenshot unavailable. Use the project link to explore the work."
               />'''
     showcase_class = {
+        'hicool': ' project-image--hicool',
         'mindful': ' project-image--mindful',
         'sbaa': ' project-image--sbaa',
         'twogethera': ' project-image--product',
@@ -78,10 +95,11 @@ for p in projects:
     feature_items = ''.join(f'<li>{e(feature)}</li>' for feature in showcase.get('features', [])) if showcase_kind in ('mindful', 'sbaa') else ''
     feature_list = f'<ul class="project-features" aria-label="Selected project features">{feature_items}</ul>' if feature_items else ''
     visual_label = {
-        'mindful': 'Preview Mindful Journal home and calendar screens',
-        'sbaa': 'Preview the SBAA School Portal administrator dashboard',
+        'hicool': 'Explore HiCOOL PH website work',
+        'sbaa': 'Preview the SBAA School Portal administrator dashboard; shown values are fictional demonstration data',
+        'mindful-journal': 'Preview Mindful Journal home and calendar screens',
         'twogethera': 'Preview Twogethera — a private shared planning app',
-    }.get(showcase_kind, 'Explore ' + e(p['title']))
+    }.get(p['id'], 'Explore ' + e(p['title']))
     card = f'''<article class="project-card reveal" data-category="{e(p['category'])}" data-project-id="{e(p['id'])}">
       <a class="project-image{showcase_class}" href="{e(p['links'][0][1])}"{external(p['links'][0][1])} aria-label="{visual_label}">{image_content}</a>
       <div class="project-body"><div class="project-meta"><span class="project-category">{e(p['label'])}</span><span class="project-state">{e(p['status'])}</span></div><h3>{e(p['title'])}</h3>{showcase_headline}<p class="project-description">{e(p['description'])}</p><p class="contribution"><strong>My contribution:</strong> {e(p['contribution'])}</p>{feature_list}<ul class="tags" aria-label="Technologies">{tags}</ul><div class="project-links">{links}</div></div>

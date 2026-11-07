@@ -7,6 +7,53 @@
   ];
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const mobile = matchMedia("(max-width: 680px)");
+  const initIntro = () => {
+    const root = document.documentElement;
+    if (!root.classList.contains("intro-pending")) return;
+
+    const startedAt = performance.now();
+    let closing = false;
+    let fallbackTimer;
+    let dismissTimer;
+    const pageRegions = $$(".site-header, main, .site-footer");
+    pageRegions.forEach((region) => {
+      region.inert = true;
+    });
+    const dismiss = (immediate = false) => {
+      if (immediate) {
+        closing = true;
+        window.clearTimeout(dismissTimer);
+        window.clearTimeout(fallbackTimer);
+        root.classList.remove("intro-pending");
+        pageRegions.forEach((region) => {
+          region.inert = false;
+        });
+        return;
+      }
+      if (closing) return;
+      closing = true;
+      const minimum = motion.matches ? 120 : 430;
+      const delay = Math.max(0, minimum - (performance.now() - startedAt));
+      dismissTimer = window.setTimeout(() => {
+        root.classList.remove("intro-pending");
+        pageRegions.forEach((region) => {
+          region.inert = false;
+        });
+        window.clearTimeout(fallbackTimer);
+      }, delay);
+    };
+
+    if (document.readyState === "complete") dismiss();
+    else window.addEventListener("load", () => dismiss(), { once: true });
+    fallbackTimer = window.setTimeout(() => dismiss(), 1600);
+    window.addEventListener(
+      "pageshow",
+      (event) => {
+        if (event.persisted) dismiss(true);
+      }
+    );
+  };
+  initIntro();
   const menuButton = $(".menu-toggle");
   const menu = $("#nav-panel");
   const more = $(".nav-more");

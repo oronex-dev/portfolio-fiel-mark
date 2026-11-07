@@ -54,6 +54,15 @@
       // Set navigation mode before first paint to avoid a mobile menu collapse.
       // With JavaScript disabled, the full navigation remains visible.
       document.documentElement.classList.add("js");
+      // Show the opening mark once per tab session, never on in-page navigation.
+      try {
+        if (!sessionStorage.getItem("oronex-intro-seen")) {
+          document.documentElement.classList.add("intro-pending");
+          sessionStorage.setItem("oronex-intro-seen", "true");
+        }
+      } catch {
+        // Storage can be unavailable in privacy-restricted browsing contexts.
+      }
     </script>
     <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
@@ -80,10 +89,21 @@
     <script
       src="script.js"
       defer
-      onerror="document.documentElement.classList.remove('js')"
+      onerror="document.documentElement.classList.remove('js', 'intro-pending')"
     ></script>
   </head>
   <body>
+    <div class="intro-screen" id="intro-screen" role="status" aria-live="polite" aria-label="Opening the ORONEX portfolio">
+      <div class="intro-core">
+        <svg class="intro-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="intro-ring" cx="50" cy="50" r="42" />
+          <text x="50" y="62" text-anchor="middle">F</text>
+        </svg>
+        <p class="intro-wordmark">ORONEX<span>.</span></p>
+        <div class="intro-progress" aria-hidden="true"><span></span></div>
+        <p class="intro-caption">CREATIVE THINKING. PRACTICAL SOLUTIONS.</p>
+      </div>
+    </div>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
@@ -176,7 +196,16 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="portrait-orbit" aria-hidden="true"><span></span></div>
+            <div class="portrait-orbit" aria-hidden="true">
+              <span class="orbit-track orbit-track--outer"><i></i></span>
+              <span class="orbit-track orbit-track--base"><i></i></span>
+              <span class="orbit-track orbit-track--inner"><i></i></span>
+              <span class="orbit-track orbit-track--wide"><i></i></span>
+              <span class="orbit-track orbit-track--mid"><i></i></span>
+              <span class="orbit-track orbit-track--near"><i></i></span>
+              <span class="orbit-satellite orbit-satellite--cyan"></span>
+              <span class="orbit-satellite orbit-satellite--violet"></span>
+            </div>
             <div class="portrait-frame">
               <img
                 src="assets/images/profile/fiel-mark.webp"
@@ -311,22 +340,29 @@
           <div class="projects-grid">
             <!-- PROJECTS_START -->
 <article class="project-card reveal" data-category="website" data-project-id="hicool">
-      <a class="project-image" href="https://www.hicoolph.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore HiCOOL PH"><img
-                  src="assets/images/projects/hicool.webp"
-                  width="1200"
-                  height="750"
-                  loading="lazy"
-                  alt="Public HiCOOL PH business website homepage"
-                  data-fallback="Project screenshot unavailable. Use the project link to explore the work."
-              /></a>
+      <a class="project-image" href="https://www.hicoolph.com/" target="_blank" rel="noopener noreferrer" aria-label="Explore HiCOOL PH website work"><div class="industrial-showcase" aria-hidden="true">
+        <span class="industrial-kicker">HiCOOL PH <i>·</i> COLD STORAGE &amp; ICE SUPPLY</span>
+        <div class="industrial-laptop">
+          <div class="industrial-screen"><img src="assets/images/projects/hicool.webp" width="1200" height="750" loading="lazy" decoding="async" alt="" data-fallback="HiCOOL PH screenshot unavailable. Use the project link to explore the website."></div>
+          <span class="industrial-laptop-base"></span>
+        </div>
+        <span class="industrial-caption">Website presentation <i aria-hidden="true">↗</i></span>
+      </div></a>
       <div class="project-body"><div class="project-meta"><span class="project-category">Client Website</span><span class="project-state">Ongoing client work</span></div><h3>HiCOOL PH</h3><p class="project-description">Responsive business website customization and frontend design for an industrial cold-storage and ice supply business.</p><p class="contribution"><strong>My contribution:</strong> Squarespace customization, page layouts, product presentation, HTML/CSS styling, and responsive improvements.</p><ul class="tags" aria-label="Technologies"><li>Squarespace</li><li>HTML</li><li>CSS</li></ul><div class="project-links"><a href="https://www.hicoolph.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Website — HiCOOL PH">Visit Website <span aria-hidden="true">↗</span></a></div></div>
     </article>
 <article class="project-card reveal" data-category="application" data-project-id="sbaa">
-      <a class="project-image project-image--sbaa" href="https://sbaa-school-portal.pages.dev/login" target="_blank" rel="noopener noreferrer" aria-label="Preview the SBAA School Portal administrator dashboard"><div class="sbaa-showcase" aria-hidden="true">
-        <div class="sbaa-browser">
-          <div class="sbaa-browser-bar"><span class="sbaa-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SBAA School Portal</span><span class="sbaa-browser-domain">Academic project preview</span></div>
-          <img src="assets/images/projects/sbaa-admin-dashboard.webp" width="1400" height="752" loading="lazy" alt="Authentic SBAA administrator dashboard using fictional demonstration data">
+      <a class="project-image project-image--sbaa" href="https://sbaa-school-portal.pages.dev/login" target="_blank" rel="noopener noreferrer" aria-label="Preview the SBAA School Portal administrator dashboard; shown values are fictional demonstration data"><div class="sbaa-showcase" aria-hidden="true">
+        <div class="sbaa-devices">
+          <div class="sbaa-laptop">
+            <div class="sbaa-browser">
+              <div class="sbaa-browser-bar"><span class="sbaa-browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>SBAA School Portal</span><span class="sbaa-browser-domain">Academic preview</span></div>
+              <img src="assets/images/projects/sbaa-admin-dashboard.webp" width="1400" height="752" loading="lazy" alt="">
+            </div>
+            <span class="sbaa-laptop-base"></span>
+          </div>
+          <div class="sbaa-phone"><img src="assets/images/projects/sbaa.webp" width="1200" height="750" loading="lazy" alt=""></div>
         </div>
+        <span class="sbaa-data-note">Interface preview <i>·</i> fictional demo data</span>
       </div></a>
       <div class="project-body"><div class="project-meta"><span class="project-category">Full-Stack Academic Team Project</span><span class="project-state">Academic development</span></div><h3>SBAA School Management Portal</h3><p class="project-showcase-headline">One connected platform for school management.</p><p class="project-description">A role-based school portal supporting administrative, faculty, and student workflows. An academic team project in ongoing development.</p><p class="contribution"><strong>My contribution:</strong> Frontend and backend implementation, interface refinement, and database/API integration as part of the team.</p><ul class="project-features" aria-label="Selected project features"><li>Role-based access</li><li>Student and faculty workflows</li><li>Academic records</li><li>Class and schedule management</li></ul><ul class="tags" aria-label="Technologies"><li>Vue.js</li><li>JavaScript</li><li>Node.js</li><li>Express</li><li>MySQL</li></ul><div class="project-links"><a href="https://sbaa-school-portal.pages.dev/login" target="_blank" rel="noopener noreferrer" aria-label="View Portal · Login required — SBAA School Management Portal">View Portal · Login required <span aria-hidden="true">↗</span></a><a href="https://github.com/oronex-dev/sbaa-school-management" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository — SBAA School Management Portal">GitHub Repository <span aria-hidden="true">↗</span></a></div></div>
     </article>

@@ -283,7 +283,7 @@ let browser;
   assert.equal(await sbaa.locator(".sbaa-browser").count(), 1);
   assert.equal(await sbaa.locator('.sbaa-browser img[src$="sbaa-admin-dashboard.webp"]').count(), 1);
   assert.deepEqual(await sbaa.locator(".sbaa-browser img").evaluate((img) => [img.naturalWidth, img.naturalHeight]), [1400, 752]);
-  assert.match(await sbaa.locator(".sbaa-browser img").getAttribute("alt"), /fictional demonstration data/i);
+  assert.match(await sbaa.locator(".project-image--sbaa").getAttribute("aria-label"), /SBAA School Portal administrator dashboard; shown values are fictional demonstration data/i);
   assert.match(await sbaa.innerText(), /Role-based access[\s\S]*Student and faculty workflows[\s\S]*Academic records[\s\S]*Class and schedule management/);
   assert.match(await sbaa.innerText(), /academic team project in ongoing development/i);
   assert.doesNotMatch(await sbaa.innerText(), /production dashboard|deployed for the school/i);

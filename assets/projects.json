@@ -29,6 +29,7 @@
     "showcase": {
       "kind": "sbaa",
       "image": "assets/images/projects/sbaa-admin-dashboard.webp",
+      "signInImage": "assets/images/projects/sbaa.webp",
       "imageAlt": "Authentic SBAA administrator dashboard using fictional demonstration data",
       "headline": "One connected platform for school management.",
       "features": [
